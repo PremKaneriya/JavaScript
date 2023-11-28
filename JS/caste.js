@@ -1,8 +1,8 @@
 // Find Scholarship
 
-const caste = prompt("Enter your caste (o, b, s, t): ");
-const fees = parseFloat(prompt("Enter your Fees: "));
-const cgpa = parseFloat(prompt("Enter your CGPA: "));
+let caste = prompt("Enter your caste (o, b, s, t): ");
+let fees = parseFloat(prompt("Enter your Fees: "));
+let cgpa = parseFloat(prompt("Enter your CGPA: "));
 
 let grade;
 let sh = 0;
