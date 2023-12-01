@@ -26,6 +26,7 @@ console.log("The Value of Math.PI is=", Math.PI);
 console.log("The Value of Math.SQRT1_2 is=", Math.SQRT1_2);
 console.log("The Value of Math.SQRT2 is=", Math.SQRT2);
 let randomNumber = Math.random();
+console.log("Random num", randomNumber);
 // ---------------- Objects ------------------ 
 // Objects in JavaScript are complex data types that allow you to store and organize data using key-value pairs. 
 
