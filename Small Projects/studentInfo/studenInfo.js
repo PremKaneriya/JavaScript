@@ -7,7 +7,7 @@ function sum() {
     let c = parseFloat(document.getElementById("c").value);
     
     let ans = a + b + c;
-
+    let per = ans / 3;
     let displayResult = document.querySelector("#ans");
-    displayResult.innerHTML = "Name : " + n + "<br>Roll No : " + r + "<br>Science : " + a + "<br > Maths : " + b + "<br > Physics : " +  a + "<br><br>Total Marks = " + ans;
+    displayResult.innerHTML = "Name : " + n + "<br>Roll No : " + r + "<br>Science : " + a + "<br > Maths : " + b + "<br > Physics : " +  a + "<br><br>Total Marks = " + ans + "<br><br> Percentage = " + parseInt(per);
 }
