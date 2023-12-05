@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+    <link rel="stylesheet" href="taxSlab.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="form-container">
+        <form onsubmit="ongive(); return false">
+            <label for="salary">Enter Salary</label><br> 
+            <input type="number" placeholder="Enter Your Salary" id="salary" required>
+
+            <table border="1px"> 
+                <tr>
+                    <th>Income Tax Slab</th>
+                    <th>Income Tax Rate</th>
+                    <th>Tax</th>
+                </tr>
+                <tr>
+                    <td>Upto Rs. 3 Lakh</td>
+                    <td>Nil</td>
+                    <td id="nill"> - None - </td>
+                </tr>
+                <tr>
+                    <td>Rs. 3 Lakh - Rs. 6 Lakh</td>
+                    <td>5%</td>
+                    <td id="three"> - None - </td>
+                </tr>
+                <tr>
+                    <td>Rs. 6 Lakh - Rs. 9 Lakh</td>
+                    <td>10%</td>
+                    <td id="six"> - None - </td>
+                </tr>
+                <tr>
+                    <td>Rs. 9 Lakh - Rs. 12 Lakh</td>
+                    <td>15%</td>
+                    <td id="nine"> - None - </td>
+                </tr>
+                <tr>
+                    <td>Rs. 12 Lakh - Rs. 15 Lakh</td>
+                    <td>20%</td>
+                    <td id="twele"> - None - </td>
+                </tr>
+                <tr>
+                    <td>Above Rs. 15 Lakh</td>
+                    <td>30%</td>
+                    <td id="fifteen"> - None - </td>
+                </tr>
+            </table>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="totalTax">
+            Total = 
+        </div>
+
+    </div>
+    
+    <script src="taxSlab.js"></script>
+</body>
+</html>

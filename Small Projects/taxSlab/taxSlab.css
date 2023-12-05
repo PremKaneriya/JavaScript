@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+body {
+    /* background-image: url(https://www.nmsrecruit.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMEhST0E9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c463f115fae772407139be8c8d808bae8ebdc351/banner-default.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    margin: 44px 200px;
+    background-color: #000;
+}
+
+#form-container {
+    background-color: white;
+    /* width: 600px; */
+    /* margin: 0; */
+    padding: 20px;
+    /* width: 800px; */
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px #785555, -10px -10px 30px #785555;
+    position: relative;
+}
+
+table {
+    margin: 24px auto;
+    /* border-radius: 30px; */
+    outline: none;
+    border: none;
+}
+
+td {
+    padding: 10px;
+    /* padding: 5px; */
+    border-radius: 5px;
+    background-color: #E3D8F1;
+    color: #230C33;
+    /* font-size: 5px; */
+    font-weight: 700;
+}
+
+th {
+    padding: 10px;
+    background-color: #C6EBBE;
+    color: #020887;
+    border-radius: 5px;
+}
+
+input {
+    padding: 12px 30px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 10px;
+    background-color: #EDCBB1;
+    color:#12100E;
+    transition: all ease 0.3s;
+}
+
+input:focus {
+    box-shadow: 10px 10px 30px #FFC8FB, -10px -10px 30px #FFC8FB;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #341C1C;
+}
+
+button {
+    padding: 11px 32px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #FFC8FB;
+    transition: all ease-in-out 0.3s;
+}
+
+button:hover {
+    background-color: #B5E2FA;
+
+}
+
+#totalTax {
+    position: absolute;
+    right: 52px;
+    color: #002500;
+    bottom: 4%;
+    border: 1px solid black;
+    padding: 6px 62px 6px 10px;
+    border-radius: 6px;
+    background-color: #EDCBB1;
+}
+
+input:hover {
+    background-color: rgb(237, 237, 255);
+    border: 1px solid#ff00ee;
+}
