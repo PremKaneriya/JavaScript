@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@600&family=Raleway:wght@500&family=Work+Sans&display=swap');
+
+body {
+    background-color: #01110A;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    /* display: flex; */
+    margin-left: 300px;
+    margin-top: 40px;
+}
+
+#form-container {
+    background-color: #D5F2E3;
+    height: 500px;
+    width: 300px;
+    padding: 20px 30px;
+    box-shadow: 10px 10px 30px #73BA9B, -10px -10px 30px #73BA9B;
+    border-radius: 10px;
+}
+
+select {
+    margin-top: 5px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    outline: none;
+    border: 1px solid black;
+    /* transition: all ease 0.2s; */
+}
+
+select:focus {
+    background-color: lightgrey;
+    color: black;
+}
+
+h3 {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: #01110A;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-top: 10px;
+    padding: 7px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid lightcoral;
+    transition: all ease 0.2s;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+#price {
+    margin-top: 10px;
+    transition: all 0.2s;
+    border: 1px solid;
+    padding: 9px 12px;
+    background-color: lightblue;
+}
+
+#price:focus {}
+
+#pc-body {
+    margin-top: 10px;
+}
+
+#secifications {
+    margin-top: 10px;
+}
+
+h1 {
+    position: absolute;
+    position: absolute;
+    right: 28%;
+    top: 45%;
+    font-family: 'Montserrat';
+    color: #d5f2e3;
+}
