@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc Selection</title>
+    <link rel="stylesheet" href="pcSelection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@500&family=Work+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="form-container">
+        <form>
+            <h3>Select Processor</h3>
+            <br>
+            <select name="" id="processor">
+                <option value="Intel i3">i3</option>
+                <option value="Intel i5">i5</option>
+                <option value="Intel i7">i7</option>
+            </select>
+            <br>
+            <h3>Select RAM</h3>
+            <br>
+            <select name="" id="ram">
+                <option value="4 GB">4 GB</option>
+                <option value="8 GB">8 GB</option>
+                <option value="16 GB">16 GB</option>
+            </select>
+            <br>
+            <h3>Select Storage</h3>
+            <br>
+            <select name="" id="storage">
+                <option value="128 SSD">128 GB SSD</option>
+                <option value="256 SSD">256 GB SSD</option>
+                <option value="1 TB HDD">1 TB HDD</option>
+            </select>
+            <br>
+            <h3>Select GrapicCard</h3>
+            <br>
+            <select name="" id="graphiccard">
+                <option value="With Graphic Card">With Graphic Card</option>
+                <option value="No Graphic Card">Without Graphic Card</option>
+            </select>
+
+        </form>
+        <div class="line"></div>
+        <button onclick="calculatePrice()">Tap For Price</button>
+
+
+        <div id="pc-body">
+            For Usage of =
+        </div>
+
+        <div id="price">
+            Bill =
+        </div>
+
+        <div id="secifications">
+            Specifications =
+        </div>
+    </div>
+
+    <h1 class="label">A Computer Shop</h1>
+
+
+    <script src="pcSelection.js"></script>
+</body>
+
+</html>

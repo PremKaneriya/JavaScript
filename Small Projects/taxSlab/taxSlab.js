@@ -132,7 +132,7 @@ function ongive() {
         three = 300000 * 0.05;
         six = 300000 * 0.10;
         nine = 300000 * 0.15;
-        twele = 1200000 * 0.20;
+        twele = 300000 * 0.20;
         fifteen = (salary - 1500000) * 0.30;
     }
 
