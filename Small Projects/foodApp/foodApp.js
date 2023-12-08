@@ -30,9 +30,21 @@ function checkOrder() {
         discount = total * 0.20; 
     } 
 
+    if (foodQuant == 0) {
+        alert("0 quantity selected")
+    }
+
+    if (friesQuant == 0) {
+        alert("0 quantity selected")
+    }
+
+    if (coldQuant == 0) {
+        alert("0 quantity selected")
+    }
+
     totaldis = total - discount;
  
     parseInt(document.getElementById("totalOrder").innerHTML = "Total Order is = " + total);
     parseInt(document.getElementById("discount").innerHTML = "Discount = " + discount);
-    parseInt(document.getElementById("totaldiscount").innerHTML = "Total Discount = " + totaldis);
+    parseInt(document.getElementById("totaldiscount").innerHTML = "Total after Discount = " + totaldis);
 }
