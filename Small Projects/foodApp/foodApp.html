@@ -58,13 +58,14 @@
                 <label for="">Food</label>
                 <select name="" id="selectFood">
                     <option value="0">-- Select your Food</option>
-                    <option value="99">Burger</option>
-                    <option value="240">Pizza</option>
-                    <option value="140">Salad</option>
+                    <option value="Burger">Burger</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Salad">Salad</option>
                 </select>
         
                 <label for=""></label>
                 <select name="" id="Foodquantity">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -73,13 +74,14 @@
                 <label for="">FrenchFries</label>
                 <select name="" id="frenchFries">
                     <option value="0">-- Select Fries --</option>
-                    <option value="100">Small</option>
-                    <option value="180">Medium</option>
-                    <option value="200">Large</option>
+                    <option value="SmallFries">SmallFries</option>
+                    <option value="MediumFries">MediumFries</option>
+                    <option value="LargeFries">LargeFries</option>
                 </select>
         
                 <label for=""></label>
                 <select name="" id="Friesquantity">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -88,21 +90,23 @@
                 <label for="">Cold Drinks </label>
                 <select name="" id="coldDrinks">
                     <option value="0">-- Select Cold Drinks --</option>
-                    <option value="100">Pepsi</option>
-                    <option value="150">Coca Cola</option>
-                    <option value="200">RedBull</option>
+                    <option value="Pepsi">Pepsi</option>
+                    <option value="CocaCola">CocaCola</option>
+                    <option value="RedBull">RedBull</option>
                 </select>
                 <label for=""></label>
                 <select name="" id="Drinkquantity">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
         
                 <br>
-                <label for="">Enter Coupon</label>
-                <input type="text" placeholder="Enter Coupon" id="code">
-                <span style="opacity: 0.4; color: orangered; ">Coupon = DISCOUNT20</span>
+                <label for="code">Enter Coupon</label>
+                <input type="text" placeholder="Enter Coupon Code" id="code">
+                <span style="opacity: 0.4; color: orangered;">Coupon = DISCOUNT20</span>
+                <br>
                 <br>
                 <button type="submit">Place Order</button>
             </form>
@@ -119,12 +123,24 @@
     
             
             <div id="totaldiscount">
-                Total Discount =
+                Total after Discount =
+            </div>
+
+            <div id="foodinfo">
+                Food Info :
             </div>
 
 
         </div>
     
+    </div>
+
+    <div class="img-items">
+        <img src="https://www.pngall.com/wp-content/uploads/4/Mcdonalds-Ham-Burger-PNG.png" alt="">
+    </div>
+
+    <div class="img-items-2">
+        <img src="https://i.pinimg.com/originals/56/ce/81/56ce81d6e008cc589047e706cd9de312.png" alt="">    
     </div>
    
     <script src="foodApp.js"></script>
