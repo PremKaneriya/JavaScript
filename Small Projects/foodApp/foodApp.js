@@ -1,47 +1,52 @@
 function checkOrder() {
     event.preventDefault();
 
-    let food = parseInt(document.getElementById("selectFood").value);
+    let food = document.getElementById("selectFood").value;
     let foodQuant = parseInt(document.getElementById("Foodquantity").value);
 
-    let fries = parseInt(document.getElementById("frenchFries").value);
+    let fries = document.getElementById("frenchFries").value;
     let friesQuant = parseInt(document.getElementById("Friesquantity").value);
 
-    let drinks = parseInt(document.getElementById("coldDrinks").value);
+    let drinks = document.getElementById("coldDrinks").value;
     let coldQuant = parseInt(document.getElementById("Drinkquantity").value);
 
-    let code = parseInt(document.getElementById("code").value);
-    
-    if (foodQuant >= 1) {
-        food = food * foodQuant;
+    let code = document.getElementById("code").value;
+
+    let foodPrice = 0;
+    let friesPrice = 0;
+    let drinksPrice = 0;
+
+    if (food === "Burger") {
+        foodPrice = 150;
+    } else if (food === "Pizza") {
+        foodPrice = 240;
+    } else if (food === "Salad") {
+        foodPrice = 100;
     }
 
-    if (friesQuant >= 1) {
-        fries = fries * friesQuant;
+    if (fries === "SmallFries") {
+        friesPrice = 150;
+    } else if (fries === "MediumFries") {
+        friesPrice = 200;
+    } else if (fries === "LargeFries") {
+        friesPrice = 250;
     }
 
-    if (coldQuant >= 1) {
-        drinks = drinks * coldQuant;
-    }
+    if (drinks === "Pepsi") {
+        drinksPrice = 150;
+    } else if (drinks === "CocaCola") {
+        drinksPrice = 200;
+    } else if (drinks === "RedBull") {
+        drinksPrice = 250;
+    }    
 
-    total = food + fries + drinks;
+    let totalFood = foodPrice * foodQuant;
+    let totalFries = friesPrice * friesQuant;
+    let totalDrinks = drinksPrice * coldQuant;
 
-    if (total > 500) {
-        discount = total * 0.20; 
-    } 
+    let overallTotal = totalFood + totalFries + totalDrinks;
 
-    if (foodQuant == 0 || friesQuant == 0 || coldQuant == 0) {
-        alert("0 quantity selected")
-    }
+    document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
 
-    totaldis = total - discount;
- 
-    parseInt(document.getElementById("totalOrder").innerHTML = "Total Order is = " + total);
-    parseInt(document.getElementById("discount").innerHTML = "Discount = " + discount);
-    parseInt(document.getElementById("totaldiscount").innerHTML = "Total after Discount = " + totaldis);
-
-    document.getElementById("foodinfo").innerHTML = "Food = " + food + " Quantity = " + foodQuant ;
-    document.getElementById("foodinfo2").innerHTML = "Fries = " + fries + " Quantity = " + friesQuant;
-    document.getElementById("foodinfo3").innerHTML = "Cold Drinks = " + drinks + " Quantity = " + coldQuant;
-
+    document.getElementById("foodinfo").innerHTML = "Food =" + food + "Price = " + totalFood + "<br>Fries =" + fries + "Price =" + totalFries + "<br>Drinks" + drinks + "Price =" + totalDrinks ;
 }
