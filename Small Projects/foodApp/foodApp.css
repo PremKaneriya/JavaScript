@@ -7,7 +7,7 @@
 
 body {
     /* background-color: #E5E5E5; */
-    background-color:  #f6be44;
+    background-color: #f6be44;
     position: relative;
 }
 
@@ -98,7 +98,7 @@ nav {
 }
 
 .texthigh h3:hover {
-    color:  #db0007;
+    color: #db0007;
     font-size: 20px;
 }
 
@@ -155,7 +155,7 @@ select {
     border: 1px solid brown;
     padding: 9px 11px;
     border-radius: 9px;
-    margin:5px 5px;
+    margin: 5px 5px;
     transition: all ease 0.2s;
 }
 
@@ -222,7 +222,7 @@ button:hover {
 #box2 {
     background-color: #ffd6a5;
     padding: 50px 50px;
-    height: 300px;
+    height: 350px;
     margin-top: 10px;
     border-radius: 10px;
     /* box-shadow: 10px 10px 30px #000; */
@@ -245,20 +245,44 @@ footer {
 
 .img-items {
     position: absolute;
-    top: 78%;
+    top: 92%;
     right: 0%;
-} 
+}
 
 .img-items img {
-    width: 300px;
+    width: 200px;
 }
 
 .img-items-2 {
     position: absolute;
     top: 92.5%;
     right: 50%;
-} 
+}
 
 .img-items-2 img {
     width: 180px;
+}
+
+#foodinfo {
+    background-color: rgb(239, 231, 222);
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 10px 22px;
+    margin-top: 5px;
+}
+
+#foodinfo2 {
+    background-color: rgb(239, 231, 222);
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 10px 22px;
+    margin-top: 5px;
+}
+
+#foodinfo3 {
+    background-color: rgb(239, 231, 222);
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 10px 22px;
+    margin-top: 5px;
 }
