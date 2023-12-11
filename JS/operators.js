@@ -55,3 +55,27 @@
 
 // console.log('2'+ 7 + 4);
 // console.log(7 + 4 + '2');
+
+// Example 1: 5 == '5'; // true (values are equal in value, but not in type)
+// Example 2: 'hello' == 'world'; // false (values and types are different)
+
+// Example 1: 5 === 5; // true (values and types are both equal)
+// Example 2: 'hello' === 'world'; // false (values and types are different)
+
+// Example 1: 10 != '10'; // false (values are equal in value, but not in type)
+// Example 2: 'apple' != 'orange'; // true (values and types are different)
+
+// Example 1: 10 !== '10'; // true (values and types are different)
+// Example 2: true !== false; // true (values and types are different)
+
+// Example 1: 15 > 10; // true
+// Example 2: 'apple'.length > 'banana'.length; // false
+
+// Example 1: 5 < 8; // true
+// Example 2: 'cat'.length < 'elephant'.length; // true
+
+// Example 1: 20 >= 20; // true
+// Example 2: 'dog'.length >= 'cat'.length; // true
+
+// Example 1: 10 <= 15; // true
+// Example 2: 'apple'.length <= 'banana'.length; // true
