@@ -10,7 +10,7 @@ function checkOrder() {
     let drinks = document.getElementById("coldDrinks").value;
     let coldQuant = parseInt(document.getElementById("Drinkquantity").value);
 
-    let code = document.getElementById("code").value;
+    let codee = document.getElementById("code").value;
 
     let foodPrice = 0;
     let friesPrice = 0;
@@ -55,5 +55,15 @@ function checkOrder() {
     document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries; 
     
     document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks; 
+
+    let afterdic;
+
+    if (codee === "DISCOUNT20") {
+        afterdic = overallTotal - (overallTotal * 0.20);
+        document.getElementById("afterDiscount").innerHTML = "After 20% Discount = " + afterdic;
+    } else {
+        document.getElementById("afterDiscount").innerHTML = "Coupon Not Applied";
+    }
+
 
 }

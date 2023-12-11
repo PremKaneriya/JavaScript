@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Care Clinic</title>
+    <link rel="stylesheet" href="dentalCare.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Mukta:wght@600&family=Raleway:wght@400;500&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div id="firstForm">
+        
+
+    <form action="" onchange="selectionOfTreatment()">
+        <h1>Dental Care Clinic</h1>
+        <select id="treatSelect">
+            <option value="0">-- Select Treatment --</option>
+            <option value="RTC">RTC</option>
+            <option value="Root Canal">Root Canal</option>
+            <option value="Teeth Cleaning">Teeth Cleaning</option>
+            <option value="Teeth Removing">Teeth Removing</option>
+        </select>
+    </form>    
+
+    <div id="treatDisplay">
+
+    </div>
+
+    <form style="margin-top: 25px;" id="offBro" onsubmit="displayDate(); return false;">
+        <label for="">Select Date</label>
+        <br>
+        <input type="date" id="myDateInput">
+        <button type="submit">Book Now</button>
+        <table id="hideorno">
+            <tr>
+                <th>Treatment</th>
+                <th>Date</th>
+                <th>Sittings</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td id="tabletreat"> </td>
+                <td id="tabledate"> </td>
+                <td id="tablesitting"> </td>
+                <td id="tableprice"> </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+    <!-- <div id="output"></div> -->
+    <!-- <div id="dateDisplay"></div> -->
+
+    <script src="dentalCare.js"></script>
+</body>
+</html>
