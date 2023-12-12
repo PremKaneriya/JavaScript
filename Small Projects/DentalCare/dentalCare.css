@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background-color: #192A51;
+}
+
+table {
+    border-radius: 10px;
+}
+
+table th {
+    padding: 10px;
+    background-color: #AAA1C8;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+}
+
+table td {
+    padding: 10px;
+    background-color: #D5C6E0;
+    border-radius: 0 0 10px 10px ;
+    border: 1px solid black;
+}
+
+#firstForm {
+    background-color: #F5E6E8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px white, -1px -1px 30px white;
+}
+
+#treatDisplay {
+    background-color: #CCF5AC;
+    /* background-color: #ffffff; */
+    padding: 10px 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+select {
+    border: 1px solid black;
+}
+
+#myDateInput {
+    margin: 15px 0px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #D5C6E0;
+    border: 1px solid black;
+}
+
+button {
+    padding: 6px 17px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+    font-weight: 700;
+    border: 1px solid black;
+    background-color: #d993f2;
+}
+
+button:hover {
+    background-color: #b441e2;
+    color: #fff;
+    box-shadow: 5px 5px 30px #d891f4, -5px -5px 30px #d891f4;
+}
+
+label {
+    font-weight: 700;
+}
+
+#treatSelect {
+    padding: 9px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: #D5C6E0;
+}
+
