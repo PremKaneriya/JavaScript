@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Care Class</title>
+    <link rel="stylesheet" href="ClassDentalCare.css">
+</head>
+
+<body>
+    
+
+    <div id="styleBG">
+        
+
+    <select name="treatment" id="treatment" onchange="handleTreatment()">
+        <option value="0">-- Select Treatment --</option>
+        <option value="rtc">Root Canal</option>
+        <option value="rtcc">RTC + Cover</option>
+        <option value="tc">Teeth Cleaning</option>
+        <option value="tr">Teeth Removing</option>
+    </select>
+
+    <style>
+        #tableNone, #hide_div {
+            display: none;
+        }
+    </style>
+
+    <table border="1px" id="tableNone" >
+        <tr>
+            <th>Treatment</th>
+            <th>Seating</th>
+            <th>Costing</th>
+        </tr>
+        <tr>
+            <td id="treatData"></td>
+            <td id="seatDate"></td>
+            <td id="costDate"></td>
+        </tr>
+    </table>
+    <br>
+
+    <div id="hide_div">
+        <label for="aptDate">Select Appointment Date:</label>
+        <br>
+        <input type="date" id="aptDate">
+        <button onclick="appointmentDate()">Book Now</button>
+    
+    
+    </div>
+
+    <div id="appointmentDisplay">
+
+    </div>
+
+    </div>
+
+
+    <script src="ClassDentalCare.js"></script>
+</body>
+
+</html>

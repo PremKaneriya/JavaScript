@@ -1,5 +1,6 @@
 document.getElementById("offBro").style.display = "none";
 document.getElementById("hideorno").style.display = "none";
+document.getElementById("hideTable").style.display = "none";
 
 function selectionOfTreatment() {
     event.preventDefault();
@@ -17,10 +18,35 @@ function selectionOfTreatment() {
         price = 2000;
     }
 
-    document.getElementById("treatDisplay").innerHTML = "Treatment = " + treats + "<br>Price = " + price;
+    
+    let sittings = 0;
 
+    if (treats === "RTC") {
+        sittings = 6;
+    } else if (treats === "Root Canal") {
+        sittings = 12;
+    } else if (treats === "Teeth Cleaning") {
+        sittings = 1;
+    } else if (treats === "Teeth Removing") {
+        sittings = 2;
+    }
+
+    document.getElementById("treatdisp").innerHTML = treats;
+    document.getElementById("sitdisp").innerHTML = sittings;
+    document.getElementById("pricedisp").innerHTML = price;
+
+    if (treats == 0) {
+        document.getElementById("hideTable").style.display = "none";
+    } else {
+        document.getElementById("hideTable").style.display = "inline-block";
+    }
+
+   if (treats == 0) {
+    document.getElementById("offBro").style.display = "none";
+   } else {
     document.getElementById("offBro").style.display = "block";
-
+   }
+   
 }
 
 function displayDate() {

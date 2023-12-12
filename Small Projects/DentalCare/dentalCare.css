@@ -64,13 +64,15 @@ button {
     margin: 20px 10px;
     border-radius: 10px;
     transition: all ease 0.2s;
-    background-color: #f8e5ff;
     font-weight: 700;
     border: 1px solid black;
+    background-color: #d993f2;
 }
 
 button:hover {
-    background-color: #d1afdf;
+    background-color: #b441e2;
+    color: #fff;
+    box-shadow: 5px 5px 30px #d891f4, -5px -5px 30px #d891f4;
 }
 
 label {
@@ -80,7 +82,7 @@ label {
 #treatSelect {
     padding: 9px;
     border-radius: 10px;
-    margin-top: 9px;
+    margin-top: 15px;
     background-color: #D5C6E0;
 }
 

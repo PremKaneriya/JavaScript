@@ -25,9 +25,18 @@
         </select>
     </form>    
 
-    <div id="treatDisplay">
-
-    </div>
+    <table border="1px solid black" id="hideTable" style="margin-top: 20px;">
+        <tr>
+            <th>Treatment</th>
+            <th>Seating</th>
+            <th>Costing</th>
+        </tr>
+        <tr>
+            <td id="treatdisp"></td>
+            <td id="sitdisp"></td>
+            <td id="pricedisp"></td>
+        </tr>
+    </table>
 
     <form style="margin-top: 25px;" id="offBro" onsubmit="displayDate(); return false;">
         <label for="">Select Date</label>

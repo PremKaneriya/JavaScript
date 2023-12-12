@@ -7,7 +7,7 @@
 
 body {
     /* background-color: #E5E5E5; */
-    background-color: #f6be44;
+    background-color: #fbf6f0;
     position: relative;
 }
 
@@ -139,7 +139,7 @@ nav {
     background-color: #ffd6a5;
     margin: 10px 35px;
     border-radius: 10px;
-    /* box-shadow: 10px 10px 30px #000; */
+    /* box-shadow: 10px 10px 30px rgb(239, 146, 146), -10px -10px 30px rgb(239, 146, 146); */
     border: 2px solid brown;
 }
 
@@ -225,7 +225,7 @@ button:hover {
     height: 350px;
     margin-top: 10px;
     border-radius: 10px;
-    /* box-shadow: 10px 10px 30px #000; */
+    /* box-shadow: 10px 10px 30px #fad378, -10px -10px 30px #fad378; */
     border: 2px solid brown;
     background-color: bisque;
 }
