@@ -14,13 +14,15 @@
 
 // Map() 
 // The map method creates a new array by applying a function to each element of an existing array.
+//  The map() method of Array creates a new array populated with the results of calling a provided function on every element in the calling array. 
 // let num = [10,20,30,40,50];
-// let ans = num.map(Math.sqrt);
+// let ans = num.map((x) => x * 2);
 // console.log(ans);
 
 
 // Filter()
 // The filter method creates a new array with elements that satisfy a given condition.
+// The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 // let age = [10, 18, 5, 8, 9, 90, 33, 55];
 // let res = age.filter(checkAdult);
 
@@ -31,7 +33,7 @@
 
 
 // Reduce()
-// The reduce() method of Array instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+// The reduce() method of Array executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
 // let arr = [1,2,3,4,5];
 // let iniVal = 0;
 // let sum = arr.reduce((accum, currVal) => accum + currVal, iniVal);
@@ -70,15 +72,15 @@
 
 // findIndex()
 // The findIndex method returns the index of the first element in the array that satisfies a given condition.  If no elements satisfy the testing function, -1 is returned.
-// let num = [1,45,66,85,23];
-// let large = (elem) => elem > 20;
+// let num = [1,45,66,85, 23];
+// let large = (elem) => elem > 60;
 // console.log(num.findIndex(large));
 
 
 // Fill()
 // The fill method fills all the elements of an array with a static value. The fill() method overwrites the original array.
 // let veges = ['Brocalli', 'Salad', 'Tomato'];
-// let ans = veges.fill('olives')
+// let ans = veges.fill('olives', 0, 2)
 // console.log(ans);
 
 
