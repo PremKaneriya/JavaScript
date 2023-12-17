@@ -32,3 +32,12 @@
 // let arr = [1,2,3,4,5,6,7,8,9,10];
 // let ans = arr.reverse();
 // console.log(ans);
+
+
+// 6.    Finding the sum of all elements in an array.
+
+// let arr = [1,2,3,4,5];
+// let ans = arr.reduce(function(accum, v) {
+//     return accum + v;
+// },0);
+// console.log(ans);
