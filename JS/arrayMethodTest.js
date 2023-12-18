@@ -325,3 +325,19 @@
 // let rev = [1,2,3,4,5];
 // let ans = rev.reverse();
 // console.log(ans); //  just do reverse
+
+// ------------- Some --------------------------
+
+// let arr = [1,2,3,4,5];
+// let ans = arr.some((elem) => elem % 2 == 0);
+// console.log(ans); // True
+
+// let marks = [44,55,66,77,88];
+// let ans = marks.some((checkFail) => checkFail < 40);
+// console.log(ans); // False
+
+// let checkGB = [4,8,16,32,64];
+// let ans = checkGB.some((gbcheck) => gbcheck > 16);
+// console.log(ans); // true
+
+// ------------- Some --------------------------
