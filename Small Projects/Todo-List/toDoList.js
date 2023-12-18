@@ -1,20 +1,24 @@
 let arr = [];
 
-function taskReturn() {
+const  taskReturn = () => {
     event.preventDefault();
     
     let task = document.getElementById("task").value;
 
     arr.push(task);
 
-    let disp = document.getElementById("displayTask");
-       
-    disp.innerHTML = '';
+    let print = '';
 
-    for (let i = 0; i < arr.length; i++) {
-        disp.innerHTML = disp.innerHTML + '<div><i class="fa-solid fa-circle-dot"></i>' + arr[i] + '</div>';
-    }
+    print = print + '<ul>';
+
+    arr.map((v) => {
+        print = print + '<div><i class="fa-solid fa-circle-dot"></i>' + v + '</div>'
+    });
+
+    print = print + '</ul>';
     
+    document.getElementById("displayTask").innerHTML = print;
+
     document.getElementById("task").value = '';
 
 }
