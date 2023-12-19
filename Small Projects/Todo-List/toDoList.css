@@ -295,6 +295,7 @@ span:hover {
     border-radius: 10px;
     color: white;
     font-size: 18px;
+    display: flex;
 }
 
 #displayTask i {
@@ -302,4 +303,10 @@ span:hover {
     color: #ffffff;
     margin-top: 12px;
     font-size: 12px;
+}
+
+#removeBTN {
+  background-color: darkblue;
+  padding: 5px 20px;
+  margin-left: 20.8rem;
 }
