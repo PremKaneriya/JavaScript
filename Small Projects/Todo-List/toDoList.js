@@ -6,7 +6,7 @@ const taskDefault = () => {
     print = print + '<ul>';
 
     arr.map((v, i) => {
-        print = print + '<div><i class="fa-solid fa-circle-dot"></i>' + v + '</div>' + '<button id="removeBTN" onclick="remove('+ i +')"><i class="fa-solid fa-trash"></i></button>'
+        print = print + '<li><i class="fa-solid fa-circle-dot"></i>' + v + '</li>' + '<button id="removeBTN" onclick="remove('+ i +')">x</button>'
     });
 
     print = print + '</ul>';
