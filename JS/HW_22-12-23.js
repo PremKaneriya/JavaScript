@@ -54,26 +54,23 @@
 
 // 9.    Removing duplicates from an array.
 
-// let arr = [22,77,54,77,65];
+// let arr = [22,77,54,77,65,77,77,77];
 
 // const findDuplicate = () => {
 
-//     let n = arr.length;
-
-//     for (let i = 0; i < n; i++) {
-//         for (let j = i + 1; j < n; j++) {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
 //             if (arr[i] == arr[j]) {
-//                 for (let k = j; k < n; k++) {
+//                 for (let k = j; k < arr.length; k++) {
 //                     arr[k] = arr[k+1];
 //                 }
-//                 n--;
+//                 arr.length--;
 //                 j--;
 //             } 
 
 //         }
 
 //     }   
-//     arr.length = n;
 //     console.log(arr);
 // }
 
@@ -161,3 +158,71 @@
 // }
 
 // mergeArr();
+
+
+// --------------------- Class Work ------------------------------------
+
+// Merge Array
+
+// let arr1 = [53,72,98,62,57];
+// let arr2 = [53,72,98,62,57];
+// let arr3 = [];
+
+// const mergeArray = () => {
+
+//     for (let i = 0; i < arr1.length; i++) {
+//         arr3[i] = arr1[i];
+//     }
+
+//     for (let i = 0; i < arr2.length; i++) {
+//         arr3[arr1.length + i] = arr2[i];
+//     }
+
+    // console.log(arr3);
+
+    // const ans = arr1.concat(arr2);
+    // console.log(ans);
+
+// }
+
+// mergeArray();
+
+// Find Specific Array 
+
+// let arr = [55,84,23,89,35];
+
+// const specificArr = () => {
+
+//     let flag = false;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === 23) {
+//             flag = true;
+//             break;
+//         }
+//     }
+
+    
+//     if (flag) {
+//         console.log('Available', flag);
+//     } else {
+//         console.log('Not Available',flag);
+//     }
+
+// }
+
+// specificArr();
+
+// remove duplicate from srray with logic
+
+// let arr = [22,456,22,78,35,78];
+
+// const remDuplicate = () => {
+
+//     const afterRemoveDuplicates = arr.filter((v, i) => arr.indexOf(v) === i);
+
+//     console.log(afterRemoveDuplicates);
+
+// }
+
+// remDuplicate();

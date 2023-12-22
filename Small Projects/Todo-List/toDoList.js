@@ -15,7 +15,7 @@ const taskDefault = () => {
     print = print + '<ul>';
 
     arr.map((v, i) => {
-        print = print + `<div id="printDiv"><p id="uupadate" onclick="updateArray('${v}', ${i})"><i class="fa-solid fa-plus fa-lg" style="color: #000000;"></i></p><h4>${v}</h4><p id="removeBTN" onclick="remove('${i}')"><i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i></p></div id="printDiv">`;
+        print = print + `<div id="printDiv"><p id="uupadate" onclick="updateArray('${v}', ${i})"><i class="fa-solid fa-pencil" style="color: #000000;"></i></p><h4>${v}</h4><p id="removeBTN" onclick="remove('${i}')"><i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i></p></div id="printDiv">`;
     });
     
     print = print + '</ul>';
