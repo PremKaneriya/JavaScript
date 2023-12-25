@@ -53,3 +53,52 @@
 // -----------------Inheritance in JS---------------------------
 
 
+// class parent {
+//     hello () {
+//         console.log("hello");
+//     }
+// }
+
+// class child extends parent {
+// }
+
+// let obj = new child();
+
+
+// class person {
+//     constructor () {
+//         this.species = 'homoSapiens'
+//     }
+//     eat () {
+//         console.log('eat');
+//     }
+//     sleep () {
+//         console.log('sleep');
+//     }
+//     work () {
+//         console.log('do nothing');
+//     }
+// }
+
+// class enginner extends person {
+//     constructor(branch){
+//         super(); // to invoke parent class constructor
+//         this.branch = branch;
+//     }
+//     work () {
+//         console.log('solve problems');
+//     }
+// }
+
+// let premobj = new enginner('Computer eng');
+
+// -------------------------------------------------
+
+// -----------------Error Handling----------------------
+
+// try {
+//     Block of code to try
+//  }
+// catch(err) {
+//     Block of code to handle errors
+// } 
