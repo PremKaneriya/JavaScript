@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<style>
+    #div {
+        background-color: red;
+        padding: 10px;
+        width: 8%;
+        cursor: pointer;
+        color: aliceblue;
+        font-size: 19px;
+    }
+</style>
+<body id="body">
+
+    <button onclick="changeBg()">Onclick</button>
+    <br>
+    <br>
+    <button ondblclick="changeBgDC()">On Double click</button>
+    <br>
+    <br>
+    <select name="" id="opt" onchange="changeCBG()">
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="black">black</option>
+    </select>
+    <br>
+    <br>
+    <button id="btn">Color Button</button>
+    <br>
+    <br>
+    <div id="div">Click Div</div>
+
+    <script src="events.js"></script>
+</body>
+</html>

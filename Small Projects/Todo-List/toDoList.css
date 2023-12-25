@@ -1,0 +1,216 @@
+/*  ------CREDITS------ */
+/* font: https://fonts.google.com/
+box-shadow: https://www.joshwcomeau.com/shadow-palette/
+icons: https://phosphoricons.com/ 
+rgba generator: https://cssgenerator.org/rgba-and-hex-color-generator.html*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+:root {
+  --shadow-color: 286deg 36% 56%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+  --bg: #f1cffc;
+  --box: #fff;
+  --details: #af7eeb;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+/* main content */
+.container-1 {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background: var(--box);
+  padding: 10px 12px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-elevation-high);
+  position: absolute;
+  margin-top: 5.5rem;
+}
+
+input {
+  padding: 12px 89px 10px 22px;
+  margin-right: 13px;
+  margin-left: 6px;
+  border-radius: 10px;
+  border: 2px solid #bb61d8;
+  color: #540054;
+}
+
+button {
+  padding: 11px 32px;
+  border-radius: 10px;
+  color: #540054;
+  background: #f1cffc;
+  border: 2px solid #f1cffc;
+  margin: 2px -11px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+#title {
+  background: #f0cefb;
+  padding: 10px 119px;
+  border-radius: 12px;
+  width: 100%;
+  margin: 3px 0px 10px -0.8px;
+  color: #540054;
+}
+
+#uupadate {
+  margin: 19px 14px 0px -9px;
+}
+
+#removeBTN {
+  margin: 19px 6px 6px 1rem;
+}
+
+
+#printDiv {
+  display: flex;
+  justify-content: start;
+  margin: 0px 5px -29px -35px;
+  background-color: #f1cffc;
+  border-radius: 10px;
+  padding: 0px 26px;
+}
+
+/* --------------------- */
+
+.container {
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  margin-top: 1.2rem;
+}
+
+.list {
+  display: flex;
+  align-items: top;
+  -webkit-animation: loop 20s infinite linear;
+  animation: loop 20s infinite linear;
+}
+
+.item-txt {
+  font-family: 'Montserrat';
+  font-size: 64px;
+  line-height: 110px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-weight: 900;
+}
+
+.item-d {
+  display: inline;
+}
+
+.item-dot {
+  max-width: 20px;
+  max-height: 20px;
+  margin: -17px 58px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  transform: translateY(-30px);
+}
+
+.dot-r {
+  background-color: #F35C4A;
+}
+
+.dot-b {
+  background-color: #1188FF;
+}
+
+.dot-g {
+  background-color: #60F2D0;
+}
+
+.dot-y {
+  background-color: #FFDB6B;
+}
+
+.dot-t {
+  background-color: #BFE05E;
+}
+
+@keyframes loop {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+i {
+  cursor: pointer;
+}
+
+/* ----------------- cursor ------------------ */
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball circle {
+  fill: #1a542b;
+}
+
+.cursor__ball--big {
+  svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.cursor__ball--small {
+  svg {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+/* ----------------- cursor ------------------ */
+
