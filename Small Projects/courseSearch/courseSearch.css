@@ -5,6 +5,10 @@
     font-family: 'Montserrat';
 }
 
+body {
+    background-color: lightcyan;
+}
+
 form {
     display: flex;
     justify-content: space-between;
@@ -22,14 +26,14 @@ input {
     border-radius: 6px;
     font-weight: bolder;
     color: blue;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     background-color: rgb(237, 248, 255);
 }
 
 #in_btn {
     padding: 12px 27px;
-    margin:0px 10px;
+    margin: 0px 10px;
     border-radius: 6px;
     background: lightblue;
 }
@@ -45,4 +49,8 @@ ul button {
 
 ul li {
     margin-top: 10px;
+    background: #add8e6;
+    padding: 15px 0;
+    width: fit-content;
+    border-radius: 13px;
 }
