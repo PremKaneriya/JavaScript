@@ -39,3 +39,15 @@ const taskReturn = () => {
     }
     taskDefault();
 }
+
+const searchCourses = () => {
+    
+    let search = document.getElementById("searchInput").value;
+
+    let doSearchCode = arr.filter(course => course.includes(search));
+
+    const displaySearch = `<ul>${doSearchCode.map((v, i) => `<li><button onclick="updateArray('${v}', ${i})">E</button> ${v} <button onclick="remove(${i})">R</button></li>`).join('')}</ul>`;
+    
+    document.getElementById("dispCourse").innerHTML = displaySearch;
+
+};
