@@ -29,24 +29,24 @@
 
 // function findSecondLargest(arr) {
     // Handle edge cases
-    if (arr.length < 2) {
-      return null; // Not enough elements to have a second largest
-    }
+    // if (arr.length < 2) {
+    //   return null; // Not enough elements to have a second largest
+    // }
   
-    // Find the largest and second largest elements in a single pass
-    let largest = -Infinity;
-    let secondLargest = -Infinity;
+    // // Find the largest and second largest elements in a single pass
+    // let largest = -Infinity;
+    // let secondLargest = -Infinity;
   
-    for (const num of arr) {
-      if (num > largest) {
-        secondLargest = largest; // Shift the previous largest to second
-        largest = num; // Update the largest
-      } else if (num > secondLargest && num !== largest) {
-        secondLargest = num; // Update second largest if it's greater
-      }
-    }
+    // for (const num of arr) {
+    //   if (num > largest) {
+    //     secondLargest = largest; // Shift the previous largest to second
+    //     largest = num; // Update the largest
+    //   } else if (num > secondLargest && num !== largest) {
+    //     secondLargest = num; // Update second largest if it's greater
+    //   }
+    // }
   
-    return secondLargest;
+    // return secondLargest;
   //}
   
   // Example usage:
@@ -85,3 +85,57 @@
 // const myArray = [5, 2, 8, 1, 9];
 // const medianValue = findMedian(myArray);
 // console.log(medianValue); // Output: 5
+
+
+// ----------- Class Work ---------------
+
+// let mixArr = [11,22,'amit','surat'];
+
+// let arr = mixArr.filter((a) => typeof a === 'number')
+// let str = mixArr.filter((a) => typeof a === 'string')
+
+// console.log(arr);
+// console.log(str);
+
+// ----------------------------------------
+
+// let arr = [11,2,3,4,5];
+
+// const rotateArr = (num) => {
+
+//   for (let i = 0; i < num; i++) {
+//     let arr1 = arr.pop();
+//     arr.unshift(arr1);
+//   }
+  
+//   console.log(arr);
+// }
+
+// let ans = rotateArr(2);
+
+
+// ----------------------------------------
+
+// let arr = [32,53,12,86,33,2,97];
+
+// const findKth = (arr, num) => {
+
+//   let ans = arr.sort((a, b) => a - b );
+//   console.log(ans[num - 1]);
+
+// }
+
+// findKth(arr, 3);
+
+// ----------------------------------------
+
+// let arr1 = [111,112,113,114,115];
+
+// const second = (arr,ele) => {
+
+//   let ans = arr1.sort((a, b) => b - a );
+//   console.log(ans[1]);
+
+// }
+
+// second(arr1)
