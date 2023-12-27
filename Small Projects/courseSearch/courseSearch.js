@@ -6,12 +6,12 @@ const updateArray = (value, index) => {
     update = index;
 }
 
-const taskDefault = (arr) => {
+const taskDefault = (filteredCourses) => {
     let print = '';
 
     print = print + '<ul>';
 
-    arr.map((v, i) => {
+    filteredCourses.map((v, i) => {
         print = print + `<li><button id="uupadate" onclick="updateArray('${v}', ${i})">E</button>${v}<button id="removeBTN" onclick="remove('${i}')"> D </button>`
         // print = print + `<div id="printDiv"><p id="uupadate" onclick="updateArray('${v}', ${i})"><i class="fa-solid fa-pencil" style="color: #000000;"></i></p><h4>${v}</h4><p id="removeBTN" onclick="remove('${i}')"><i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i></p></div id="printDiv">`;
     });
@@ -42,9 +42,9 @@ const taskReturn = () => {
 }
 
 const searchInputCource = () => {
-    const searchInput = document.getElementById("searchInput").value;
+    let searchInput = document.getElementById("searchInput").value;
 
-    const filteredCourses = arr.filter(a => a.includes(searchInput));
+    let filteredCourses = arr.filter(a => a.includes(searchInput));
 
     taskDefault(filteredCourses);
 };
