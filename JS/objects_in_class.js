@@ -71,48 +71,48 @@
 //     v.course.map((v) => console.log(v))
 // })
 
-// let data = {
-//     personal_info: {
-//         name: 'amit',
-//         age: 25,
-//         city: 'surat'
-//     },
-//     courses: ["C", "JavaScript", "React"],
-//     branches: {
-//         b1: {
-//             admission: 50,
-//             vacant_seat: 10
-//         },
-//         b2: {
-//             admission: 30,
-//             vacant_seat: 20
-//         },
-//         b3: {
-//             admission: 25,
-//             vacant_seat: 25
-//         },
-//         b4: {
-//             admission: 40,
-//             vacant_seat : 10
-//         }
-//     }
-// };
+let data = {
+    personal_info: {
+        name: 'amit',
+        age: 25,
+        city: 'surat'
+    },
+    courses: ["C", "JavaScript", "React"],
+    branches: {
+        b1: {
+            admission: 50,
+            vacant_seat: 10
+        },
+        b2: {
+            admission: 30,
+            vacant_seat: 20
+        },
+        b3: {
+            admission: 25,
+            vacant_seat: 25
+        },
+        b4: {
+            admission: 40,
+            vacant_seat : 10
+        }
+    }
+};
 
-// for (let k in data) {
-//     if (k === 'personal_info') {
-//         for(let j in data[k]){
-//             console.log(data[k][j]);
-//         }
-//     } else if (k === 'courses') {
-//         data.courses.map((v) => console.log(v));
-//     } else if (k === 'branches') {
-//         for (let i in data[k]) {
-//             for (let p in data[k][i]) {
-//                 console.log(data[k][i][p]);
-//             }           
-//         }
-//     }
-// }
+for (let k in data) {
+    if (k === 'personal_info') {
+        for(let j in data[k]){
+            console.log(data[k][j]);
+        }
+    } else if (k === 'courses') {
+        data.courses.map((v) => console.log(v));
+    } else if (k === 'branches') {
+        for (let i in data[k]) {
+            for (let p in data[k][i]) {
+                console.log(data[k][i][p]);
+            }           
+        }
+    }
+}
 
 // const myObj = {
 //     name:"jd",
