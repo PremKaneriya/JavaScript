@@ -98,18 +98,18 @@ let data = {
     }
 };
 
-for (let k in data) {
+for (const k in data) {
     if (k === 'personal_info') {
-        for(let j in data[k]){
+        for (const j in data[k]) {
             console.log(data[k][j]);
         }
     } else if (k === 'courses') {
         data.courses.map((v) => console.log(v));
     } else if (k === 'branches') {
-        for (let i in data[k]) {
-            for (let p in data[k][i]) {
+        for (const i in data[k]) {
+            for (const p in data[k][i]) {
                 console.log(data[k][i][p]);
-            }           
+            }
         }
     }
 }
