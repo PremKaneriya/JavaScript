@@ -1,0 +1,21 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+    font-size: 19px;
+    /* line-height: 1.6; */
+    letter-spacing: 1.4px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 3rem 32rem;
+    font-size: 18px;
+}
+
+input {
+    padding: 13px 50px 13px 23px;
+}
+
+#subbtn {
+    padding: 8px 12px;
+} 
