@@ -19,13 +19,13 @@ const employeeSubmit = () => {
 
     let print = '';
 
-    print = print + '<ul>'
+    print = print + '<ol>'
     arr.map((v) => {
         print = print + '<li>'
         print = print + '<br>' + 'ID :' + v.id + '<br>' + 'Name :' +  v.name + '<br>' + 'Salary Per Month :' + v.salary;
         print = print + '</li>' 
     });
-    print = print + '</ul>'
+    print = print + '</ol>'
 
     document.getElementById("displayData").innerHTML = print;
 
