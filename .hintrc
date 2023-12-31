@@ -17,7 +17,9 @@
           "width: fit-content"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off",
+    "axe/name-role-value": "off"
   },
   "browserslist": [
     "defaults",

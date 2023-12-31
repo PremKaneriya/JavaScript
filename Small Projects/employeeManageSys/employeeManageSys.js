@@ -22,7 +22,7 @@ const employeeSubmit = () => {
     print = print + '<ul>'
     arr.map((v) => {
         print = print + '<li>'
-        print = print + '<br>' + v.id + '<br>' + v.name + '<br>' + v.salary;
+        print = print + '<br>' + 'ID :' + v.id + '<br>' + 'Name :' +  v.name + '<br>' + 'Salary Per Month :' + v.salary;
         print = print + '</li>' 
     });
     print = print + '</ul>'
