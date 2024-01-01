@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW_1_1_24</title>
+</head>
+<body id="body" > 
+    <!-- onload="onloadBG()" -->
+    
+    <button ondblclick="dblclick()">Double Click</button>
+    <br>
+    <br>    
+    <button onclick="click()" id="click">Click</button>
+    <br>
+    <br>
+
+    <div id="box">
+        nothing
+    </div>
+
+    <div id="cursor"></div>
+    <br><br>
+    <button id="div">
+        Click to See Console
+    </button>
+
+    <button id="eventlist">EventListener</button>
+
+    <script src="JS/HW_1_1_24.js"></script>
+</body>
+<style>
+    #box {
+        height: 100px;
+        background-color: red;
+        color: white;
+        font-size: 38px;
+        width: 140px;
+    }
+
+    #cursor {
+            width: 20px;
+            height: 20px;
+            background-color: #00f;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+        }
+</style>
+</html>
