@@ -7,7 +7,7 @@ const validateForm = () => {
     if (formName === "") {
         document.getElementById("nameErr").innerHTML = 'Please Enter Full Name'
     } else {
-        let alphaReg = /^[a-zA-Z ]{2,30}$/;
+        let alphaReg = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;
 
         if (alphaReg.test(formName)) {
             document.getElementById("nameErr").innerHTML = ""
