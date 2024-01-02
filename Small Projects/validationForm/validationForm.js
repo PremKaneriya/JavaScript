@@ -1,7 +1,8 @@
-
-const formName = document.forms.contactForm.elements.name.value;
-
 const validateForm = () => {
+
+    let fName = true, fMail = true, fNum = true, fCountry = true, fGender = true, fHobby = true; 
+
+    const formName = document.forms.contactForm.elements.name.value;
     console.log(formName);
 
     if (formName === "") {
@@ -11,6 +12,7 @@ const validateForm = () => {
 
         if (alphaReg.test(formName)) {
             document.getElementById("nameErr").innerHTML = ""
+            fName = false;
         } else {
             document.getElementById("nameErr").innerHTML = 'Please Enter Valid name';
         }
@@ -26,6 +28,7 @@ const validateForm = () => {
 
         if (emailReg.test(formMail)) {
             document.getElementById("emailErr").innerHTML = ""
+            fMail = false;
         } else {
             document.getElementById("emailErr").innerHTML = 'Please Enter Valid Email Address';
         }
@@ -42,6 +45,7 @@ const validateForm = () => {
 
         if (numReg.test(formNum)) {
             document.getElementById("mobileErr").innerHTML = ""
+            fNum = false;
         } else {
             document.getElementById("mobileErr").innerHTML = 'Please Enter Valid Mobile Number';
         }
@@ -55,6 +59,7 @@ const validateForm = () => {
         document.getElementById("countryErr").innerHTML = 'Please Select Country';
     } else {
         document.getElementById("countryErr").innerHTML = "";
+        fCountry = false;
     }
 
     const formGender = document.querySelector('input[name="gender"]:checked');
@@ -64,6 +69,7 @@ const validateForm = () => {
         document.getElementById("genderErr").innerHTML = 'Please select a gender';
     } else {
         document.getElementById("genderErr").innerHTML = '';
+        fGender = false;
     }
 
     const formHobbies = document.querySelectorAll('input[name="hobbies"]:checked');
@@ -73,8 +79,13 @@ const validateForm = () => {
         document.getElementById("hobbyErr").innerHTML = 'Please select at least 2 hobbies';
     } else {
         document.getElementById("hobbyErr").innerHTML = '';
+        fHobby = false;
     }
 
-    return false;
-}
+    if (fName || fMail || fNum || fCountry || fGender || fHobby) {
+        return false;
+    } else {
+        return true;
+    }
 
+}
