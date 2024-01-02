@@ -26,6 +26,29 @@ function seePrice() {
         }
     }
 
+    let checkProcessor = document.querySelector('input[name="processor"]:checked');
+    let checkRam = document.querySelector('input[name="ram"]:checked');
+    let checkMemory = document.querySelector('input[name="memory"]:checked');
+
+    if (!checkProcessor){
+        document.getElementById('proErr').innerHTML = 'Please Select Processor';
+    } else {
+        document.getElementById('proErr').innerHTML = '' ;
+    }
+    
+    if (!checkRam){
+        document.getElementById('ramErr').innerHTML = 'Please Select Ram';
+    } else {
+        document.getElementById('ramErr').innerHTML = '' ;
+    }
+
+    if (!checkMemory){
+        document.getElementById('memoErr').innerHTML = 'Please Select Memory';
+    } else {
+        document.getElementById('memoErr').innerHTML = '' ;
+    }
+
+
     let total = processor + ram + memory + graphic;
 
     document.getElementById("display").innerHTML = "Price = " + total + "Type = " + type;
