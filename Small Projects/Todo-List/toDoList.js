@@ -17,9 +17,9 @@ const taskDefault = () => {
     arr.map((v, i) => {
         print = print + `<div id="printDiv"><p id="uupadate" onclick="updateArray('${v}', ${i})"><i class="fa-solid fa-pencil" style="color: #000000;"></i></p><h4>${v}</h4><p id="removeBTN" onclick="remove('${i}')"><i class="fa-solid fa-xmark fa-lg" style="color: #000000;"></i></p></div id="printDiv">`;
     });
-    
+
     print = print + '</ul>';
-    
+
 
     document.getElementById("displayTask").innerHTML = print;
 
@@ -36,6 +36,13 @@ const taskReturn = () => {
     event.preventDefault();
 
     let task = document.getElementById("task").value;
+
+    if (!task.trim()) {
+        document.getElementById('taskerror').innerHTML = 'Please enter a valid task';
+        return;
+    } else {
+        document.getElementById('taskerror').innerHTML = '';
+    }
 
     if (update !== null || update === 0) {
         arr[update] = task;

@@ -10,28 +10,31 @@
 
     <form action="" onsubmit="seePrice()">
         <label for="">Select Processor</label>
-        <select name="" id="processor">
+        <select name="processor" id="processor">
             <option value="0">-- Select Processor --</option>
             <option value="3000">i3</option>
             <option value="6000">i5</option>
             <option value="9000">i7</option>
         </select>
+        <span id="proErr" style="color: red;"> </span>
         <br>
         <label for="">Select RAM</label>
-        <select name="" id="ram">
+        <select name="ram" id="ram">
             <option value="0">-- Select RAM --</option>
             <option value="2000">4 GB</option>
             <option value="4000">8 GB</option>
             <option value="6000">16 GB</option>
         </select>
+        <span id="ramErr" style="color: red;"> </span>
         <br>
         <label for="">Select Memory</label>
-        <select name="" id="memory">
+        <select name="memory" id="memory">
             <option value="0">-- Select Memory --</option>
             <option value="3000">256 GB</option>
             <option value="6000">512 GB</option>
             <option value="9000">1 TB</option>
         </select>
+        <span id="memoErr" style="color: red;"> </span>
         <br>
         <label for="">Select Graphic</label>
         <select name="" id="graphic">

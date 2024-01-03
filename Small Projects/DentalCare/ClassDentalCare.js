@@ -48,23 +48,38 @@ function appointmentDate() {
 
     let d = new Date(aptDating);
 
-    let print = "<table border='1'> <tr> <th>Treatment</th><th>Seating</th> <th>Costing</th> </tr>";
+    let checkDate = true;
+    let dateErr = document.querySelector('input[name="dateErr"]:checked');
 
-    for (let i = 0; i < tr_s; i++) {
-        print = print + "<tr>";
-        if (i === 0) {
-            print = print + '<td rowspan='+ tr_s +'>' + tr_name + '</td>';
-        }
-        print = print + "<td>"  + d.toLocaleDateString() + "</td>"
-        print = print + "<td>" + tr_c / tr_s + "</td>"
-        print = print + "</tr>";
-
-
-        d.setDate(d.getDate() + 7);
+    if (dateErr === null) {
+        document.getElementById('dateerror').innerHTML = 'Please Select Date';
+    } else {
+        document.getElementById('dateerror').innerHTML = '';
+        checkDate = false;
     }
 
+    if (checkDate) {
+        return false;
+    } else {
+        let print = "<table border='1'> <tr> <th>Treatment</th><th>Seating</th> <th>Costing</th> </tr>";
 
-    print = print + "</table>";
+        for (let i = 0; i < tr_s; i++) {
+            print = print + "<tr>";
+            if (i === 0) {
+                print = print + '<td rowspan=' + tr_s + '>' + tr_name + '</td>';
+            }
+            print = print + "<td>" + d.toLocaleDateString() + "</td>"
+            print = print + "<td>" + tr_c / tr_s + "</td>"
+            print = print + "</tr>";
 
-    document.getElementById("appointmentDisplay").innerHTML = print;
+
+            d.setDate(d.getDate() + 7);
+        }
+        print = print + "</table>";
+
+        document.getElementById("appointmentDisplay").innerHTML = print;
+
+        return false;
+    }
+
 }

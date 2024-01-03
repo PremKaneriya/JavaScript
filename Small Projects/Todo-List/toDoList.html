@@ -95,9 +95,11 @@
             <div class="todo-app">
                 <h1 id="title"><i class="ph-list-checks" id="list"></i>Todo List</h1>
                 <form class="row" onsubmit="taskReturn()">
-                    <input type="text" placeholder="Enter Your Tasks" id="task">
+                    <input type="text" name="task" placeholder="Enter Your Tasks" id="task">
+                    
                     <button type="submit">Add</button>
                 </form>
+                <span id="taskerror"></span>
                 <div id="displayTask">
 
                 </div>

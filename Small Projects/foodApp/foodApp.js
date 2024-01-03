@@ -58,6 +58,33 @@ function checkOrder() {
 
     let afterdic;
 
+    let checkFood = document.querySelector('select[name="checkFood"]');
+    let checkFries = document.querySelector('select[name="checkFries"]');
+    let checkDrink = document.querySelector('select[name="checkDrink"]');
+
+    let chefood = true, chefries = true, chedrink = true;
+
+    if (checkFood.value === "0") {
+        document.getElementById("alertfood").innerHTML = 'Please Select Food';
+    } else {
+        document.getElementById("alertfood").innerHTML = '';
+        chefood = false;
+    }
+
+    if (checkFries.value === "0") {
+        document.getElementById("alertfries").innerHTML = 'Please Select Fries';
+    } else {
+        document.getElementById("alertfries").innerHTML = '';
+        chefries = false;
+    }
+
+    if (checkDrink.value === "0") {
+        document.getElementById("alertdrinks").innerHTML = 'Please Select Drinks';
+    } else {
+        document.getElementById("alertdrinks").innerHTML = '';
+        chedrink = false;
+    }
+
     if (codee === "DISCOUNT20") {
         afterdic = overallTotal - (overallTotal * 0.20);
         document.getElementById("afterDiscount").innerHTML = "After 20% Discount = " + afterdic;
@@ -65,5 +92,10 @@ function checkOrder() {
         document.getElementById("afterDiscount").innerHTML = "Coupon Not Applied";
     }
 
+    if (chefood || chefries || chedrink){
+        return false;
+    } else {
+        return true;
+    }
 
 }
