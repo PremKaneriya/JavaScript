@@ -37,14 +37,11 @@ const taskReturn = () => {
 
     let task = document.getElementById("task").value;
 
-    let checkTask = document.querySelector('input[name="task"]:checked');
-
-    if (!checkTask) {
-        document.getElementById('taskerror').innerHTML = 'Please Select Task';   
+    if (!task.trim()) {
+        document.getElementById('taskerror').innerHTML = 'Please enter a valid task';
         return;
     } else {
         document.getElementById('taskerror').innerHTML = '';
-        
     }
 
     if (update !== null || update === 0) {
