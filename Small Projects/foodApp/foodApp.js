@@ -1,3 +1,5 @@
+document.getElementById('box2').style.display = 'none';
+
 function checkOrder() {
     event.preventDefault();
 
@@ -48,15 +50,17 @@ function checkOrder() {
 
     let overallTotal = totalFood + totalFries + totalDrinks;
 
-    document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+    // document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
 
-    document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
-    
-    document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries; 
-    
-    document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks; 
+    // document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+    // document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries; 
+
+    // document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks; 
 
     let afterdic;
+
+    // -------------------
 
     let checkFood = document.querySelector('select[name="checkFood"]');
     let checkFries = document.querySelector('select[name="checkFries"]');
@@ -68,6 +72,16 @@ function checkOrder() {
         document.getElementById("alertfood").innerHTML = 'Please Select Food';
     } else {
         document.getElementById("alertfood").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('box2').style.display = 'block';
+
         chefood = false;
     }
 
@@ -75,6 +89,16 @@ function checkOrder() {
         document.getElementById("alertfries").innerHTML = 'Please Select Fries';
     } else {
         document.getElementById("alertfries").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('box2').style.display = 'block';
+
         chefries = false;
     }
 
@@ -82,8 +106,79 @@ function checkOrder() {
         document.getElementById("alertdrinks").innerHTML = 'Please Select Drinks';
     } else {
         document.getElementById("alertdrinks").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('drinkinfo').style.display = 'block';
+
+        document.getElementById('totalOrder').style.display = 'block';
+        document.getElementById('afterDiscount').style.display = 'block';
+
+
         chedrink = false;
     }
+
+    // -----------------
+
+    const checkfoodProp = document.getElementById('selectFood');
+    const checkfriesProp = document.getElementById('frenchFries');
+    const checkcoldProp = document.getElementById('coldDrinks');
+
+    if (checkfoodProp.value === "0") {
+        document.getElementById("alertfoodPart").innerHTML = 'Please Select Item';
+    } else {
+        document.getElementById("alertfoodPart").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('box2').style.display = 'block';
+
+
+    }
+
+    if (checkfriesProp.value === "0") {
+        document.getElementById("alertfriesPart").innerHTML = 'Please Select Item';
+    } else {
+        document.getElementById("alertfriesPart").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('box2').style.display = 'block';
+
+    }
+
+    if (checkcoldProp.value === "0") {
+        document.getElementById("alertdrinksPart").innerHTML = 'Please Select Item';
+    } else {
+        document.getElementById("alertdrinksPart").innerHTML = '';
+        document.getElementById("totalOrder").innerHTML = "Your Total Order is: " + overallTotal;
+
+        document.getElementById("foodinfo").innerHTML = "Food = " + food + ":" + " Food Price = " + foodPrice + "*" + foodQuant + " = " + totalFood;
+
+        document.getElementById("friesinfo").innerHTML = "Fries = " + fries + ":" + " Fries Price = " + friesPrice + "*" + friesQuant + " = " + totalFries;
+
+        document.getElementById("drinkinfo").innerHTML = "Drinks = " + drinks + ":" + " Drinks Price = " + drinksPrice + "*" + coldQuant + " = " + totalDrinks;
+
+        document.getElementById('box2').style.display = 'block';
+
+    }
+
+    // -------------------
 
     if (codee === "DISCOUNT20") {
         afterdic = overallTotal - (overallTotal * 0.20);
@@ -92,7 +187,7 @@ function checkOrder() {
         document.getElementById("afterDiscount").innerHTML = "Coupon Not Applied";
     }
 
-    if (chefood || chefries || chedrink){
+    if (chefood || chefries || chedrink) {
         return false;
     } else {
         return true;
