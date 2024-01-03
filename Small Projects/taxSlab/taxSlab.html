@@ -14,8 +14,8 @@
     <div id="form-container">
         <form onsubmit="ongive(); return false">
             <label for="salary">Enter Salary</label><br> 
-            <input type="number" placeholder="Enter Your Salary" id="salary" required>
-
+            <input type="number" name="entersalaryerr" placeholder="Enter Your Salary" id="salary">
+            <span id="salErr" style="color: red;"></span>
             <table border="1px"> 
                 <tr>
                     <th>Income Tax Slab</th>

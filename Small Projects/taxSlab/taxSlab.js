@@ -106,6 +106,13 @@ function ongive() {
     let salary = parseFloat(document.getElementById("salary").value);
 
     let nill = "nill", three = 0, six = 0, nine = 0, twele = 0, fifteen = 0, total;
+    
+    if (!salary) {
+        document.getElementById('salErr').innerHTML = 'Please select a salary range';
+        return;
+    } else {
+        document.getElementById('salErr').innerHTML = '';
+    }
 
     if (salary <= 300000 ) {
         nill = 0, three = 0, six = 0, nine = 0, twele = 0, fifteen = 0;

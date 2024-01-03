@@ -38,7 +38,7 @@ const taskReturn = () => {
     let task = document.getElementById("task").value;
 
     if (!task.trim()) {
-        document.getElementById('taskerror').innerHTML = 'Please enter a valid task';
+        document.getElementById('taskerror').innerHTML = 'Please enter task';
         return;
     } else {
         document.getElementById('taskerror').innerHTML = '';
