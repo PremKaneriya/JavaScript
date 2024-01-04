@@ -23,4 +23,8 @@ empForm.addEventListener('submit', function () {
         localStorage.setItem('employee', JSON.stringify(localStoreData))
     }
 
+    const displayStorage = document.getElementById('displayLocalStorage');
+
+    displayStorage.innerHTML = localStoreData.map((v) => "<br><br>" + `ID: ${v.id} <br> Employee-Name: ${v.empName} <br> Salary: ${v.salary}`)
+
 });
