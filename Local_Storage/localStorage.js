@@ -4,22 +4,22 @@
 
 // -------------------
 
-// setItem(key, value): Adds or updates a key-value pair in the storage.
-// getItem(key): Retrieves the value associated with the specified key.
+// setItem(key, value): //Adds or updates a key-value pair in the storage.
+// getItem(key):// Retrieves the value associated with the specified key.
 
-// localStorage.setItem('name', 'John Jacobs');
-// localStorage.setItem('movie', 'Animal');
+localStorage.setItem('name', 'John Jacobs');
+localStorage.setItem('movie', 'Animal');
 
 
-// const locSto = localStorage.getItem('name');
-// const locSto1 = localStorage.getItem('movie');
+const locSto = localStorage.getItem('name');
+const locSto1 = localStorage.getItem('movie');
 
-// console.log(locSto,',', locSto1);
+console.log(locSto,',', locSto1);
 
 // -------------------
-
-// localStorage.setItem('name', 'Enzo Ferrari');
-// console.log(localStorage);
+// gets an object
+localStorage.setItem('name', 'Enzo Ferrari');
+console.log(localStorage);
 
 // -------------------
 
@@ -51,7 +51,7 @@
 
 // ---------------------
 
-// removeItem(key): Removes the key-value pair with the specified key from the storage.
+// removeItem(key): // Removes the key-value pair with the specified key from the storage.
 
 // localStorage.setItem('name', 'Jacquine Phoneix')
 
