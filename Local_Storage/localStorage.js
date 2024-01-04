@@ -52,3 +52,9 @@
 // ---------------------
 
 // removeItem(key): Removes the key-value pair with the specified key from the storage.
+
+// localStorage.setItem('name', 'Jacquine Phoneix')
+
+// localStorage.removeItem('name');
+
+// ---------------------
