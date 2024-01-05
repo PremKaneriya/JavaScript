@@ -1,6 +1,54 @@
-const empForm = document.getElementById('employeeForm');
+const handleDelete = (id) => {
+    // console.log(id);
 
-empForm.addEventListener('submit', function () {
+    let localRemove = JSON.parse(localStorage.getItem('employee'));
+
+    const index = localRemove.findIndex((v) => v.id === id);
+
+    // console.log(index);
+
+    localRemove.splice(index, 1);
+
+    localStorage.setItem('employee', JSON.stringify(localRemove));
+
+    displayLocalStorage();
+}
+
+const handleUpdate = (empName, salary) => {
+    // console.log(empName, salary);
+
+    let updateEmp = JSON.parse(localStorage.getItem('employee'));
+
+    document.getElementById('empName').value = empName;
+    document.getElementById('empNum').value = salary;
+
+    updateEmp.empName = empName;
+    updateEmp.empNum = empNum;
+
+    localStorage.setItem('employee', JSON.stringify(updateEmp));
+
+    displayLocalStorage();
+
+}
+
+const displayLocalStorage = () => {
+    let localStoreDisp = JSON.parse(localStorage.getItem('employee'));
+
+    let print = '';
+
+    print += '<table border="1px solid black" id="jsTable"><tr><th>Name</th><th>Salary</th><th>Actions</th></tr>';
+
+    localStoreDisp.map((v, i) => {
+        print += `<tr><td>${v.empName}</td><td>${v.salary}</td><td><button onclick="handleUpdate('${v.empName}', ${v.salary})">E</button><button onclick="handleDelete(${v.id})">X</button></td></tr>`
+    });
+
+    print += '</table>';
+
+    document.getElementById('displayLocalStorage').innerHTML = print;
+
+}
+
+const handleSubmit = () => {
     event.preventDefault();
 
     let empName = document.getElementById("empName").value;
@@ -23,8 +71,12 @@ empForm.addEventListener('submit', function () {
         localStorage.setItem('employee', JSON.stringify(localStoreData))
     }
 
-    const displayStorage = document.getElementById('displayLocalStorage');
+    displayLocalStorage();
+}
 
-    displayStorage.innerHTML = localStoreData.map((v) => "<br><br>" + `ID: ${v.id} <br> Employee-Name: ${v.empName} <br> Salary: ${v.salary}`)
 
-});
+const empForm = document.getElementById('employeeForm');
+
+empForm.addEventListener('submit', handleSubmit);
+
+window.onload = displayLocalStorage;
