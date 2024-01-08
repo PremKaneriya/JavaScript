@@ -1,3 +1,20 @@
+let update = null;
+
+const handleSearch = () => {
+    event.preventDefault();
+
+    const searchInput = document.getElementById("handleSearch").value;
+
+    let localStoreData = JSON.parse(localStorage.getItem('employee'));
+
+    let searchFilter = localStoreData.filter((a) => a.empName.includes(searchInput) || a.salary.toString().includes(searchInput));
+
+    displayLocalStorage(searchFilter);
+
+    console.log(searchFilter);
+
+}
+
 const handleDelete = (id) => {
     // console.log(id);
 
@@ -14,20 +31,16 @@ const handleDelete = (id) => {
     displayLocalStorage();
 }
 
-const handleUpdate = (empName, salary) => {
-    // console.log(empName, salary);
+const handleUpdate = (id) => {
 
-    let updateEmp = JSON.parse(localStorage.getItem('employee'));
+    let updateData = JSON.parse(localStorage.getItem('employee'));
 
-    document.getElementById('empName').value = empName;
-    document.getElementById('empNum').value = salary;
+    let index = updateData.findIndex((v) => v.id === id);
 
-    updateEmp.empName = empName;
-    updateEmp.empNum = empNum;
+    document.getElementById('empName').value = updateData[index].empName;
+    document.getElementById('empNum').value = updateData[index].salary;
 
-    localStorage.setItem('employee', JSON.stringify(updateEmp));
-
-    displayLocalStorage();
+    update = index;
 
 }
 
@@ -39,7 +52,11 @@ const displayLocalStorage = () => {
     print += '<table border="1px solid black" id="jsTable"><tr><th>Name</th><th>Salary</th><th>Actions</th></tr>';
 
     localStoreDisp.map((v, i) => {
-        print += `<tr><td>${v.empName}</td><td>${v.salary}</td><td><button onclick="handleUpdate('${v.empName}', ${v.salary})">E</button><button onclick="handleDelete(${v.id})">X</button></td></tr>`
+        print += `<tr><td>${v.empName}</td><td>${v.salary}</td><td>
+        
+        <button onclick="handleUpdate(${v.id})">E</button>
+
+        <button onclick="handleDelete(${v.id})">X</button></td></tr>`
     });
 
     print += '</table>';
@@ -51,6 +68,8 @@ const displayLocalStorage = () => {
 const handleSubmit = () => {
     event.preventDefault();
 
+    const localStoreData = JSON.parse(localStorage.getItem('employee'));
+
     let empName = document.getElementById("empName").value;
     let empNum = document.getElementById("empNum").value;
 
@@ -60,20 +79,22 @@ const handleSubmit = () => {
         salary: parseInt(empNum)
     }
 
-    console.log(locObj);
 
-    const localStoreData = JSON.parse(localStorage.getItem('employee'));
-
-    if (localStoreData === null) {
-        localStorage.setItem('employee', JSON.stringify([locObj]));
+    if (update !== null) {
+        console.log('yes');
+        localStoreData[update].empName = empName;
+        localStoreData[update].salary = parseInt(empNum);
+        update = null;
     } else {
         localStoreData.push(locObj);
-        localStorage.setItem('employee', JSON.stringify(localStoreData))
     }
 
+    localStorage.setItem('employee', JSON.stringify(localStoreData));
     displayLocalStorage();
-}
 
+    document.getElementById('empName').value = '';
+    document.getElementById('empNum').value = '';
+}
 
 const empForm = document.getElementById('employeeForm');
 

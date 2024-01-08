@@ -7,19 +7,34 @@
 </head>
 <body>
 
-    <form action="" id="employeeForm">
-        <input type="text" id="empName" placeholder="Enter Name">
+    <div id="main">
+        <form action="" id="employeeForm">
+            <input type="text" id="empName" placeholder="Enter Name">
+            <br><br>
+            <input type="number" id="empNum" placeholder="Enter Number">
+            <br><br>
+            <input type="submit">
+        </form>
         <br><br>
-        <input type="number" id="empNum" placeholder="Enter Number">
-        <br><br>
-        <input type="submit">
-    </form>
-    
-    <div id="displayLocalStorage"></div>
+        <div id="displayLocalStorage"></div>
+    </div>
+
+    <input type="text" placeholder="Search" id="handleSearch" onkeyup="handleSearch()">
 
     <script src="EmployeeSystem.js"></script>
 </body>
 <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    #handleSearch {
+        padding: 10px 20px;
+    }
+
     #jsTable {
         margin: 20px 0;
     }
