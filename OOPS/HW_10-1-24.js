@@ -50,7 +50,38 @@
 // Encapsulation is a concept in Object-Oriented Programming (OOP) where the properties and methods of a class are bundled within a single unit or entity, i.e., an object.
 // In JavaScript, encapsulation is achieved using closures
 
+class Student {
+    constructor() {
+        // Private properties
+        this._name;
+        this._marks;
+    }
 
+    // Getter and setter for name
+    get name() {
+        return this._name;
+    }
+    set name(name) {
+        this._name = name;
+    }
+
+    // Getter and setter for marks
+    get marks() {
+        return this._marks;
+    }
+    set marks(marks) {
+        this._marks = marks;
+    }
+}
+
+let s1 = new Student();
+
+// Using setters to set values
+s1.name = 'Jacobs';
+s1.marks = 45;
+
+// Using getters to retrieve values
+console.log(s1.name, s1.marks);
 
 
 // -------------------- Abstraction --------------------
@@ -61,6 +92,30 @@
 
 // Abstraction in JavaScript is the concept of showing only the essential features of an object while hiding the complexity and unnecessary details. It allows you to hide the internal details of an object and only show the functionality.
 
+// class Employee {
+//     constructor(name, age, baseSalary) {
+//         this.name = name;
+//         this.age = age;
+//         this.baseSalary = baseSalary;
+//         this.monthlyBonus = 1000;
+//     }
+
+//     calcFinalSalary(){
+//         let finalSalary = this.monthlyBonus + this.baseSalary;
+//         console.log('Final Salary : ', finalSalary); 
+//     }
+
+//     getempDetails(){
+//         console.log('Name : ', this.name);
+//         console.log('Age : ', this.age);
+//         this.calcFinalSalary();
+//     }
+
+// }
+
+// let emp1 = new Employee('James', 45, 3000);
+// emp1.getempDetails();
+// emp1.monthlyBonus = 10000 // this is a glitch
 
 
 // -------------------- Polymorphism -------------------- 
@@ -84,6 +139,6 @@
 //     return x + y + z;
 //   }
   
-//   console.log(add(1, 2)); // Output: 3
-//   console.log(add(1, 2, 3)); // Output: 6
+//   console.log(add(1, 2)); 
+//   console.log(add(1, 2, 3)); 
   
