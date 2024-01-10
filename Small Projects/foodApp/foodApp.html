@@ -15,7 +15,12 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Mukta:wght@600&family=Raleway:wght@500&family=Work+Sans&display=swap"
         rel="stylesheet">
 </head>
-
+<style>
+    span {
+        color: red;
+        font-weight: bolder;
+    }
+</style>
 <body>
 
     <nav>
@@ -54,9 +59,9 @@
                 <h1>OUR MENU</h1>
             </div>
             
-            <form action="" onsubmit="checkOrder()">
+            <form action="" onsubmit="return checkOrder()">
                 <label for="">Food</label>
-                <select name="" id="selectFood">
+                <select name="selFood" id="selectFood">
                     <option value="0">-- Select your Food</option>
                     <option value="Burger">Burger</option>
                     <option value="Pizza">Pizza</option>
@@ -64,12 +69,13 @@
                 </select>
         
                 <label for=""></label>
-                <select name="" id="Foodquantity">
+                <select name="checkFood" id="Foodquantity">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
+                <span id="alertfood"></span>
                 <br>
                 <label for="">FrenchFries</label>
                 <select name="" id="frenchFries">
@@ -80,12 +86,13 @@
                 </select>
         
                 <label for=""></label>
-                <select name="" id="Friesquantity">
+                <select name="checkFries" id="Friesquantity">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
+                <span id="alertfries"></span>
                 <br>
                 <label for="">Cold Drinks </label>
                 <select name="" id="coldDrinks">
@@ -95,12 +102,14 @@
                     <option value="RedBull">RedBull</option>
                 </select>
                 <label for=""></label>
-                <select name="" id="Drinkquantity">
+                <select name="checkDrink" id="Drinkquantity">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
+                <span id="alertdrinks"></span>
+
         
                 <br>
                 <label for="code">Enter Coupon</label>
