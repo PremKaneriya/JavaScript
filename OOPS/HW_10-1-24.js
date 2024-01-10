@@ -50,38 +50,38 @@
 // Encapsulation is a concept in Object-Oriented Programming (OOP) where the properties and methods of a class are bundled within a single unit or entity, i.e., an object.
 // In JavaScript, encapsulation is achieved using closures
 
-class Student {
-    constructor() {
-        // Private properties
-        this._name;
-        this._marks;
-    }
+// class Student {
+//     constructor() {
+//         // Private properties
+//         this._name;
+//         this._marks;
+//     }
 
-    // Getter and setter for name
-    get name() {
-        return this._name;
-    }
-    set name(name) {
-        this._name = name;
-    }
+//     // Getter and setter for name
+//     get name() {
+//         return this._name;
+//     }
+//     set name(name) {
+//         this._name = name;
+//     }
 
-    // Getter and setter for marks
-    get marks() {
-        return this._marks;
-    }
-    set marks(marks) {
-        this._marks = marks;
-    }
-}
+//     // Getter and setter for marks
+//     get marks() {
+//         return this._marks;
+//     }
+//     set marks(marks) {
+//         this._marks = marks;
+//     }
+// }
 
-let s1 = new Student();
+// let s1 = new Student();
 
-// Using setters to set values
-s1.name = 'Jacobs';
-s1.marks = 45;
+// // Using setters to set values
+// s1.name = 'Jacobs';
+// s1.marks = 45;
 
-// Using getters to retrieve values
-console.log(s1.name, s1.marks);
+// // Using getters to retrieve values
+// console.log(s1.name, s1.marks);
 
 
 // -------------------- Abstraction --------------------
@@ -131,14 +131,23 @@ console.log(s1.name, s1.marks);
 
 // Polymorphism is a core concept of object-oriented programming that allows objects to take on many forms depending on the context . It refers to the ability of different data types to be processed by a single function or method . In JavaScript, polymorphism can be achieved through prototype inheritance and method overloading.
 
-// function add(x, y) {
-//     return x + y;
-//   }
-  
-//   function add(x, y, z) {
-//     return x + y + z;
-//   }
-  
-//   console.log(add(1, 2)); 
-//   console.log(add(1, 2, 3)); 
-  
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    } 
+
+    eats() {
+        console.log(this.name, 'Eats food');
+    }
+}
+
+class Alligator extends Animal {
+    eats() {
+        super.eats();
+        console.log(this.name, 'Eats snails');
+    }
+}
+
+let aligator = new Alligator('Alligator');
+aligator.eats();
