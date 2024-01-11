@@ -73,7 +73,7 @@
 // emp.display();
 // emp.empDisplay();
 
-// ---------------------------------------------------------------------------------------------------
+// // ---------------------------------------------------------------------------------------------------
 
 // class Zoo {
 //     name;
@@ -152,86 +152,86 @@
 
 // ---------------------------------------------------------------------------------------------------
 
-// class Movie {
-//     name;
-//     #budget;
-//     #productionCost
+class Movie {
+    name;
+    #budget;
+    #productionCost
 
-//     constructor(name, budget, productionCost) {
-//         this.name = name;
-//         this.#budget = budget;
-//         this.#productionCost = productionCost;
-//     }
+    constructor(name, budget, productionCost) {
+        this.name = name;
+        this.#budget = budget;
+        this.#productionCost = productionCost;
+    }
 
-//     set budget(b) {
-//         this.#budget = b;
-//     }
-//     get budget(){
-//         return this.#budget;
-//     }
+    set budget(b) {
+        this.#budget = b;
+    }
+    get budget(){
+        return this.#budget;
+    }
 
-//     set productionCost(p) {
-//         this.#productionCost = p;
-//     }
-//     get productionCost(){
-//         return this.#productionCost;
-//     }
+    set productionCost(p) {
+        this.#productionCost = p;
+    }
+    get productionCost(){
+        return this.#productionCost;
+    }
 
-//     display() {
-//         console.log('Name :', this.name);
-//         console.log('Budget :', this.#budget);
-//         console.log('Production Cost :', this.#productionCost);
-//     }
+    display() {
+        console.log('Name :', this.name);
+        console.log('Budget :', this.#budget);
+        console.log('Production Cost :', this.#productionCost);
+    }
 
-// }
+}
 
-// class Distributor extends Movie {
-//     #movieCollection;
-//     #distributionCost;
-//     #SellonOTT
+class Distributor extends Movie {
+    #movieCollection;
+    #distributionCost;
+    #SellonOTT
 
-//     constructor(name, budget, productionCost, movieCollection, distributionCost, SellonOTT) {
-//         super(name, budget, productionCost);
-//         this.#movieCollection = movieCollection;
-//         this.#distributionCost = distributionCost;
-//         this.#SellonOTT = SellonOTT;
-//     }
+    constructor(name, budget, productionCost, movieCollection, distributionCost, SellonOTT) {
+        super(name, budget, productionCost);
+        this.#movieCollection = movieCollection;
+        this.#distributionCost = distributionCost;
+        this.#SellonOTT = SellonOTT;
+    }
 
-//     set movieCollection(m) {
-//         this.#movieCollection = m;
-//     }
-//     get movieCollection(){
-//         return this.#movieCollection;
-//     }
+    set movieCollection(m) {
+        this.#movieCollection = m;
+    }
+    get movieCollection(){
+        return this.#movieCollection;
+    }
 
-//     set distributionCost(d) {
-//         this.#distributionCost = d;
-//     }
-//     get distributionCost(){
-//         return this.#distributionCost;
-//     }
+    set distributionCost(d) {
+        this.#distributionCost = d;
+    }
+    get distributionCost(){
+        return this.#distributionCost;
+    }
 
-//     set SellonOTT(s) {
-//         this.#SellonOTT = s;
-//     }
-//     get SellonOTT(){
-//         return this.#SellonOTT;
-//     }
+    set SellonOTT(s) {
+        this.#SellonOTT = s;
+    }
+    get SellonOTT(){
+        return this.#SellonOTT;
+    }
 
-//     displayDistrubution() {
-//         console.log('Movie Collection :', this.movieCollection);
-//         console.log('Distribution Cost :', this.#distributionCost);
-//         console.log('Sell on OTT :', this.#SellonOTT);
-//     }
+    displayDistrubution() {
+        console.log('Movie Collection :', this.movieCollection);
+        console.log('Distribution Cost :', this.#distributionCost);
+        console.log('Sell on OTT :', this.#SellonOTT);
+    }
     
-// }
+}
 
-// const movieAll = new Distributor('Animal');
-// movieAll.budget = 1000000;
-// movieAll.productionCost = 30000;
-// movieAll.movieCollection = 500000;
-// movieAll.distributionCost = 7000;
-// movieAll.SellonOTT = 250000;
-// movieAll.display();
-// movieAll.displayDistrubution();
+const movieAll = new Distributor('Animal');
+movieAll.budget = 1000000;
+movieAll.productionCost = 30000;
+movieAll.movieCollection = 500000;
+movieAll.distributionCost = 7000;
+movieAll.SellonOTT = 250000;
+movieAll.display();
+movieAll.displayDistrubution();
 
