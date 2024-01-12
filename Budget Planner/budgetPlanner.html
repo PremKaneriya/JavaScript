@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Mukta:wght@600&family=Raleway:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="budgetPlanner.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Budget Planner</h1>
+        <section>
+            <input  type="number" id="budget-input" placeholder="Please Enter Your Budget" >
+            <span id="spanbudget" style="color: red; padding: 10px;" ></span>
+            <button id="budget-btn" >Calculate</button>
+        </section>
+        <section>
+            <input type="text" id="expense-title" placeholder="Expense Title">
+            <span id="spantitle" style="color: red; padding: 10px;" ></span>
+            <input type="number" id="expense-amount" placeholder="Please Enter Expense Amount">
+            <span id="spanexpense" style="color: red; padding: 10px;" ></span>
+            <span id="balanceerr" style="color: red; padding: 10px;"></span>
+
+            <button id="expense-btn">Add Expense</button>
+        </section>
+        <section class="balance">
+            <div>
+                <img src="" alt="Budget" class="icon">
+                <span id="budget"> $0</span>
+            </div>
+            <div>
+                <img src="cart.png" alt="Expense" class="icon">
+                <span id="expenses"> $0</span>
+            </div>
+            <div>
+                <span id="balance">BALANCE $0</span>
+            </div>
+        </section>
+        <div id="displayOutput"></div>
+    </div>
+
+
+    <script src="budgetPlanner.js"></script>
+</body>
+
+</html>
