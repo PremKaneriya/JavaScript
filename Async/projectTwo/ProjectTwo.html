@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Two</title>
+</head>
+<body>
+    
+    <h1>Learn Async In JS</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const setIntervalTest = () => {
+        console.log('Prem', Date.now);
+    }
+
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(setInter);  
+        console.log('Time Out Stop ');
+    })
+
+    document.querySelector('#start').addEventListener('click', function() {
+        setInter = setInterval(setIntervalTest, 1000);
+    })
+
+
+</script>
+</html>
