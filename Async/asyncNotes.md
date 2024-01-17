@@ -2,7 +2,7 @@
 
 # Project 1
 
-```
+```javascript
     <h1>Async In Js</h1>
     <button id="stop">Stop</button>
 
@@ -24,7 +24,7 @@
 
 # Project 2
 
-```
+```javascript
    <h1>Learn Async In JS</h1>
     <button id="start">start</button>
     <button id="stop">stop</button>
@@ -46,7 +46,7 @@
 
 # Project 3
 
-```
+```javascript
 const insert = document.getElementById('insert');
 
 window.addEventListener('keydown', (e) => {
@@ -72,7 +72,7 @@ window.addEventListener('keydown', (e) => {
 
 # Project 4
 
-```
+```javascript
 const randomColor = () => {
     const hex = '0123456789ABCDEF'
     let color = '#'
