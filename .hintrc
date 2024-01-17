@@ -26,6 +26,12 @@
       {
         "duplicate-id": "off"
       }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
     ]
   },
   "browserslist": [

@@ -180,20 +180,18 @@ for (const person of complexData) {
     console.log(person.id, person.name, person.age);
     console.log(person.contact.email, person.contact.phone.home, person.contact.phone.mobile);
 
-    person.skills.forEach(skill => console.log(skill));
+    for (const skill of person.skills) {
+        console.log(skill);
+    }
 
-    person.projects.forEach(project =>{
-        console.log(project.projectName)
-
-        project.technologies.forEach(tech => {
-            console.log(tech)
-        })
-
-        project.team.forEach(team => {
-            console.log(team.name, team.role);
-        })
-
-    });
-
+    for (const project of person.projects) {
+        console.log(project.projectName);
+        for (const tech of project.technologies) {
+            console.log(tech);
+        }
+        for (const member of project.team) {
+            console.log(member.name, member.role);
+        }
+    }
     
 }

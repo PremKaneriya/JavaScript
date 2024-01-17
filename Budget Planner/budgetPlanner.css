@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 80%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 50px auto;
     /* background: white; */
     background-color: #DDBDD5;
@@ -91,4 +91,14 @@ button:hover {
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
 }
+
+#budget, #expenses, #balance {
+    background-color: #ddbdd5;
+    padding: 4px;
+    color: black;
+    border-radius: 10px;
+}
+
