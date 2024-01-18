@@ -97,7 +97,7 @@ button:hover {
 
 #budget, #expenses, #balance {
     background-color: #ddbdd5;
-    padding: 4px;
+    padding: 3px;
     color: black;
     border-radius: 10px;
 }
