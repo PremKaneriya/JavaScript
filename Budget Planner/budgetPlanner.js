@@ -2,6 +2,8 @@ class Budget {
     constructor() {
         this.budgetInput = document.getElementById("budget-input");
         this.budgetDisplay = document.getElementById("budget");
+        this.expenseAmountInner = document.getElementById('expenses');
+        this.balanceAmountInner = document.getElementById('balance');
     }
 
     handleBudgetClick() {
@@ -22,16 +24,31 @@ class Budget {
                 this.handleBudgetAndExpense();
             }
         }
+
+        this.budgetInput.value = '';
     }
 
     handleBudgetAndExpense() {
         event.preventDefault();
 
         let budgetDisp = JSON.parse(localStorage.getItem("budget"));
+        let expenseddd = JSON.parse(localStorage.getItem('Expense'))
 
-        if (budgetDisp) {
-            this.budgetDisplay.innerHTML = `$: ${budgetDisp}`;
+        if (!(budgetDisp === null)) {
+            document.getElementById("budget").innerHTML = "$: " + budgetDisp;
         }
+
+        let expAmount = expenseddd.reduce((acc, val) => acc + parseInt(val.expense_amount), 0)
+
+        if (!(expAmount === null)) {
+            document.getElementById('expenses').innerHTML = "$: " + expAmount;
+            document.getElementById('balance').innerHTML = "$: " + (budgetDisp - expAmount);
+                
+        }
+
+        // this.budgetDisplay.innerHTML = `$: ${budgetDisp}`;
+        // this.expenseAmountInner.innerHTML = `$: ${expAmount}`;
+        // this.balanceAmountInner.innerHTML = `$: ${budgetDisp - expAmount}`;
     }
 }
 
@@ -40,8 +57,8 @@ class Expense extends Budget {
         super();
         this.expenseTitle = document.getElementById("expense-title");
         this.expenseAmount = document.getElementById("expense-amount");
-            this.expenseDisplay = document.getElementById('expenses');
-            this.balanceDisplay = document.getElementById('balance');
+        this.expenseDisplay = document.getElementById('expenses');
+        this.balanceDisplay = document.getElementById('balance');
     }
 
     handleExpenseClick() {
@@ -58,7 +75,7 @@ class Expense extends Budget {
             expenseTitleValidation = false;
         }
 
-        if (this.expenseAmount.value === "") {
+        if (this.expenseAmount.value === "" || this.expenseAmount.value > this.budgetInput.value) {
             document.getElementById("spanexpense").innerHTML = "Please Enter Expense";
         } else {
             if (
@@ -73,31 +90,32 @@ class Expense extends Budget {
         }
 
         if (!(expenseTitleValidation || expenseAmountValidation)) {
-            let expense = JSON.parse(localStorage.getItem('Expense'))
 
             let expenseObj = {
                 id: Math.round(Math.random() * 10000),
                 expense_title: this.expenseTitle.value,
-                expense_amount: this.expenseAmount.value
+                expense_amount: parseInt(this.expenseAmount.value)
             }
 
-            if (expense) {
-                expense.push(expenseObj)
-                localStorage.setItem('Expense', JSON.stringify(expense))
+            let Expense = JSON.parse(localStorage.getItem('Expense'));
+            if (Expense) {
+                Expense.push(expenseObj)
+                localStorage.setItem('Expense', JSON.stringify(Expense))
+
             } else {
                 localStorage.setItem('Expense', JSON.stringify([expenseObj]))
 
             }
 
-            if (expense) {
-                this.balanceDisplay.innerHTML = `$: ${(this.budgetInput.value - this.expenseAmount.value)}`
 
-                this.expenseDisplay.innerHTML = `$: ${this.expenseAmount.value}`
-            }
         }
 
+        this.handleBudgetAndExpense();
 
+        this.expenseTitle.value = "";
+        this.expenseAmount.value = "";
     }
+
 }
 
 const b = new Budget();
@@ -113,3 +131,7 @@ const expense_btn = document.getElementById("expense-btn");
 expense_btn.addEventListener("click", function () {
     e.handleExpenseClick();
 });
+
+window.onload = function () {
+    b.handleBudgetAndExpense();
+};
