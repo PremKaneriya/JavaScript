@@ -75,7 +75,7 @@ class Expense extends Budget {
             expenseTitleValidation = false;
         }
 
-        if (this.expenseAmount.value === "" || this.expenseAmount.value > this.budgetInput.value) {
+        if (this.expenseAmount.value === "") {
             document.getElementById("spanexpense").innerHTML = "Please Enter Expense";
         } else {
             if (
