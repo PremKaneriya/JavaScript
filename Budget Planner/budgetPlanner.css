@@ -50,7 +50,8 @@ input {
     border-radius: 6px;
 }
 
-button {
+#expense-btn,
+#budget-btn {
     width: 25%;
     height: 40px;
     border: none;
@@ -93,12 +94,24 @@ button:hover {
     text-transform: capitalize;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-#budget, #expenses, #balance {
+#budget,
+#expenses,
+#balance {
     background-color: #ddbdd5;
     padding: 3px;
     color: black;
     border-radius: 10px;
 }
 
+#editBtn,
+#deleteBtn {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background: #59656f;
+    color: white;
+    margin: 5px;
+}

@@ -43,12 +43,13 @@ class Budget {
         if (!(expAmount === null)) {
             document.getElementById('expenses').innerHTML = "$: " + expAmount;
             document.getElementById('balance').innerHTML = "$: " + (budgetDisp - expAmount);
-                
+
         }
 
         // this.budgetDisplay.innerHTML = `$: ${budgetDisp}`;
         // this.expenseAmountInner.innerHTML = `$: ${expAmount}`;
         // this.balanceAmountInner.innerHTML = `$: ${budgetDisp - expAmount}`;
+    
     }
 }
 
@@ -61,9 +62,51 @@ class Expense extends Budget {
         this.balanceDisplay = document.getElementById('balance');
     }
 
+    handleDeleteClick(id) {
+        const idDelete = document.getElementById(id)
+        idDelete.remove();
+    }
+
+    handleDisplayFunc (expenseObj) {
+        event.preventDefault();
+        const dispDiv = document.createElement('div');
+
+        dispDiv.setAttribute('id',expenseObj.id);
+    
+        const action = document.createElement('span')
+
+        const editBtn = document.createElement('button')
+        const editBtnText = document.createTextNode('E');
+        editBtn.appendChild(editBtnText)
+        editBtn.setAttribute('id', 'editBtn')
+
+        const deleteBtn = document.createElement('button')
+        const deleteBtnText = document.createTextNode('D');
+        deleteBtn.appendChild(deleteBtnText)
+        deleteBtn.setAttribute('id', 'deleteBtn')
+        deleteBtn.addEventListener('click', () => {
+            this.handleDeleteClick(expenseObj.id);
+        })
+
+        action.appendChild(editBtn);
+        action.appendChild(deleteBtn);
+
+        const expText = document.createTextNode(`ID: ${expenseObj.id}, Title: ${expenseObj.expense_title}, Amount: ${expenseObj.expense_amount}, `)
+        dispDiv.appendChild(expText)
+        dispDiv.appendChild(action)
+        dispDiv.style.padding = '12px'
+        dispDiv.style.border = '2px solid #59656f'
+        dispDiv.style.marginBottom = '8px'
+        dispDiv.style.backgroundColor = '#ddbdd5'
+        dispDiv.style.borderRadius = '10px'
+
+        const displayOutput = document.getElementById('displayOutput');
+        displayOutput.appendChild(dispDiv);
+        
+    }
+   
     handleExpenseClick() {
         event.preventDefault();
-        console.log(this.expenseTitle.value, this.expenseAmount.value);
 
         let expenseTitleValidation = true;
         let expenseAmountValidation = true;
@@ -107,13 +150,14 @@ class Expense extends Budget {
 
             }
 
-
+            this.handleDisplayFunc(expenseObj);
         }
 
         this.handleBudgetAndExpense();
 
         this.expenseTitle.value = "";
         this.expenseAmount.value = "";
+
     }
 
 }
