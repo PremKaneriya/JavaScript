@@ -49,7 +49,7 @@ class Budget {
         // this.budgetDisplay.innerHTML = `$: ${budgetDisp}`;
         // this.expenseAmountInner.innerHTML = `$: ${expAmount}`;
         // this.balanceAmountInner.innerHTML = `$: ${budgetDisp - expAmount}`;
-    
+
     }
 }
 
@@ -60,51 +60,63 @@ class Expense extends Budget {
         this.expenseAmount = document.getElementById("expense-amount");
         this.expenseDisplay = document.getElementById('expenses');
         this.balanceDisplay = document.getElementById('balance');
+
+        this.update = null;
     }
 
     handleDeleteClick(id) {
-        const idDelete = document.getElementById(id)
+        const idDelete = document.getElementById(id);
         idDelete.remove();
+
+        let expenses = JSON.parse(localStorage.getItem('Expense'));
+        expenses = expenses.filter(expense => expense.id !== id);
+        localStorage.setItem('Expense', JSON.stringify(expenses));
+
+        this.handleBudgetAndExpense();
     }
 
-    handleDisplayFunc (expenseObj) {
-        event.preventDefault();
+    handleEditClick(expenseObj) {
+        this.expenseTitle.value = expenseObj.expense_title;
+        this.expenseAmount.value = expenseObj.expense_amount;
+
+        this.update = expenseObj.id;
+    }
+
+    handleDisplayFunc(expenseObj) {
         const dispDiv = document.createElement('div');
 
-        dispDiv.setAttribute('id',expenseObj.id);
-    
-        const action = document.createElement('span')
+        const span1 = document.createElement('span');
+        const span2 = document.createElement('span');
 
-        const editBtn = document.createElement('button')
-        const editBtnText = document.createTextNode('E');
-        editBtn.appendChild(editBtnText)
-        editBtn.setAttribute('id', 'editBtn')
+        const expenseTit = document.createTextNode(`Title: ${expenseObj.expense_title} , `);
+        const expenseAmt = document.createTextNode(`Amount: ${expenseObj.expense_amount}`);
 
-        const deleteBtn = document.createElement('button')
-        const deleteBtnText = document.createTextNode('D');
-        deleteBtn.appendChild(deleteBtnText)
-        deleteBtn.setAttribute('id', 'deleteBtn')
-        deleteBtn.addEventListener('click', () => {
+        span1.appendChild(expenseTit);
+        span2.appendChild(expenseAmt);
+
+        const editButton = document.createElement('button');
+        editButton.setAttribute('id', 'editBtn');
+        editButton.textContent = 'E';
+        editButton.addEventListener('click', () => {
+            this.handleEditClick(expenseObj);
+        });
+
+        const deleteButton = document.createElement('button');
+        deleteButton.setAttribute('id', 'deleteBtn');
+        deleteButton.textContent = 'D';
+        deleteButton.addEventListener('click', () => {
             this.handleDeleteClick(expenseObj.id);
-        })
+        });
 
-        action.appendChild(editBtn);
-        action.appendChild(deleteBtn);
-
-        const expText = document.createTextNode(`ID: ${expenseObj.id}, Title: ${expenseObj.expense_title}, Amount: ${expenseObj.expense_amount}, `)
-        dispDiv.appendChild(expText)
-        dispDiv.appendChild(action)
-        dispDiv.style.padding = '12px'
-        dispDiv.style.border = '2px solid #59656f'
-        dispDiv.style.marginBottom = '8px'
-        dispDiv.style.backgroundColor = '#ddbdd5'
-        dispDiv.style.borderRadius = '10px'
+        dispDiv.appendChild(span1);
+        dispDiv.appendChild(span2);
+        dispDiv.appendChild(editButton);
+        dispDiv.appendChild(deleteButton);
 
         const displayOutput = document.getElementById('displayOutput');
         displayOutput.appendChild(dispDiv);
-        
     }
-   
+
     handleExpenseClick() {
         event.preventDefault();
 
@@ -133,6 +145,9 @@ class Expense extends Budget {
         }
 
         if (!(expenseTitleValidation || expenseAmountValidation)) {
+            this.handleBudgetClick();
+
+            let Expense = JSON.parse(localStorage.getItem('Expense'));
 
             let expenseObj = {
                 id: Math.round(Math.random() * 10000),
@@ -140,20 +155,30 @@ class Expense extends Budget {
                 expense_amount: parseInt(this.expenseAmount.value)
             }
 
-            let Expense = JSON.parse(localStorage.getItem('Expense'));
-            if (Expense) {
-                Expense.push(expenseObj)
-                localStorage.setItem('Expense', JSON.stringify(Expense))
+            if (this.update) {
+                let index = Expense.findIndex((v) => v.id === this.update);
+                
+                Expense[index] = expenseObj;
+                
+                localStorage.setItem('Expense', JSON.stringify(Expense));
 
+                this.update = null;
             } else {
-                localStorage.setItem('Expense', JSON.stringify([expenseObj]))
-
+                if (Expense) {
+                    Expense.push(expenseObj)
+                    localStorage.setItem('Expense', JSON.stringify(Expense))
+    
+                } else {
+                    localStorage.setItem('Expense', JSON.stringify([expenseObj]))
+    
+                }
             }
 
+
+            this.handleBudgetAndExpense();
             this.handleDisplayFunc(expenseObj);
         }
 
-        this.handleBudgetAndExpense();
 
         this.expenseTitle.value = "";
         this.expenseAmount.value = "";
@@ -178,4 +203,6 @@ expense_btn.addEventListener("click", function () {
 
 window.onload = function () {
     b.handleBudgetAndExpense();
+
+    e.handleDisplayFunc();
 };
