@@ -25,3 +25,8 @@ const promise = new Promise((resolve, reject) => {
 // The Promise.all() static method takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 
 // Promise.all is a method in JavaScript that takes an iterable (e.g., an array) of promises as input and returns a single Promise that is fulfilled with an array of the results when all the input promises are fulfilled. If any of the input promises is rejected, the returned Promise is also rejected with the reason of the first rejected promise. It allows for parallel execution of multiple asynchronous operations and is commonly used when you need to wait for the completion of several asynchronous tasks before proceeding.
+
+
+// callback hell
+
+// Callback hell, also known as "pyramid of doom," is a situation in asynchronous JavaScript programming where multiple nested callbacks make the code hard to read, understand, and maintain. This commonly occurs when dealing with a series of asynchronous operations that depend on the results of one another.
