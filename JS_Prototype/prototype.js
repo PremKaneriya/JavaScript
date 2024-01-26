@@ -30,3 +30,30 @@
 //     .then((data) =>{
 //         console.log(data);
 //     })
+
+// const myPromise1 = fetch('https://jsonplaceholder.typicode.com/posts') 
+// const myPromise2 = fetch('https://jsonplaceholder.typicode.com/posts') 
+// const myPromise3 = fetch('https://jsonplaceholder.typicode.com/posts')
+
+// const allPromise = Promise.all([myPromise1, myPromise2, myPromise3])
+//     .then((response) => {
+//         return Promise.all(response.map((res) => res.json()))
+//     })
+//     .then((v) => {
+//         console.log('API Data', v);
+//     })
+
+// const fetching = async () => {
+//     const api = await fetch('https://jsonplaceholder.typicode.com/posts')
+//     const dataResponse = await api.json();
+//     console.log(dataResponse);
+// }
+// fetching()
+
+const fetchrr = async () => {
+    const api = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const response = await api.json()
+    console.log(response); 
+}
+
+fetchrr()
