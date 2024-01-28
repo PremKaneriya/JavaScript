@@ -66,10 +66,6 @@
 // let text = 'Hello World';
 // console.log(text.match(/Hello/))
 
-// test
-// let text = 'Hello World';
-// console.log(text.test(/Hello/))
-
 // toLowerCase
 // let text = 'HELLO WORLD';
 // console.log(text.toLowerCase())
@@ -77,3 +73,27 @@
 // toUpperCase
 // let text = 'hello world';
 // console.log(text.toUpperCase())
+
+// test
+// const pattern =  /JS/
+// const lang = 'Learn, JS'
+// const ans = pattern.test(lang)
+// console.log(ans);
+
+
+
+// const str = 'Learn JavaScript, JS is awesome!';
+// const pattern = /JS/g;
+
+// const matches = str.match(pattern);
+
+// console.log(matches);
+// // Output: [ 'JS', 'JS' ]
+
+
+// const lang = 'learn js'
+// const pat = /js/g
+
+// const metch = lang.match(pat)
+
+// console.log(match);
